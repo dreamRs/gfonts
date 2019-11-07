@@ -16,6 +16,14 @@ get_all_fonts <- function() {
 }
 
 
+get_font_info <- function(id, subsets = NULL) {
+  if (!is.null(subsets))
+    subsets <- paste(subsets, collapse = ",")
+  res <- get_gf(paste0("/api/fonts/", id), query = dropNulls(list(subsets = subsets)))
+  jsonlite::fromJSON(res$parse("UTF-8"))
+}
+
+
 download_font <- function(id, output_dir, ...) {
   output_dir <- normalizePath(output_dir, mustWork = TRUE)
   if (!dir.exists(output_dir)) {
