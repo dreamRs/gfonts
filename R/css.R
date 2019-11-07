@@ -1,5 +1,5 @@
 
-
+#' @importFrom glue glue
 glue_css <- function(font_info, path = "../fonts/") {
   template <- readLines(system.file("assets/templates/css_best.txt", package = "gfonts"))
   template <- paste(template, collapse = "\n")

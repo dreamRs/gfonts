@@ -1,5 +1,5 @@
 Package: gfonts
-Title: 'Google' Fonts for 'Markdown' and 'Shiny'
+Title: Offline 'Google' Fonts for 'Markdown' and 'Shiny'
 Version: 0.0.0.9000
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
@@ -10,6 +10,9 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports:
+  utils,
   htmltools,
   crul,
-  jsonlite
+  jsonlite,
+  glue
+RoxygenNote: 6.1.1

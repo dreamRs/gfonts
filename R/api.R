@@ -1,5 +1,5 @@
 
-
+#' @importFrom crul HttpClient
 get_gf <- function(path, query = list(), ...) {
   url <- getOption("gfonts.url", default = "https://google-webfonts-helper.herokuapp.com")
   cli <- crul::HttpClient$new(url, opts = list(...))
@@ -10,12 +10,41 @@ get_gf <- function(path, query = list(), ...) {
 
 
 
+#' Get infos about all fonts available
+#'
+#' @return a \code{data.frame}
+#' @export
+#'
+#' @importFrom jsonlite fromJSON
+#'
+#' @examples
+#' \donttest{
+#'
+#' all_fonts <- get_all_fonts()
+#'
+#' }
 get_all_fonts <- function() {
   res <- get_gf("/api/fonts/")
   jsonlite::fromJSON(res$parse("UTF-8"))
 }
 
 
+#' Get detailled infos about one font
+#'
+#' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
+#' @param subsets Select charsets, for example \code{"latin"}.
+#'
+#' @return a \code{data.frame}.
+#' @export
+#'
+#' @importFrom jsonlite fromJSON
+#'
+#' @examples
+#' \donttest{
+#'
+#' roboto <- get_font_info("roboto")
+#'
+#' }
 get_font_info <- function(id, subsets = NULL) {
   if (!is.null(subsets))
     subsets <- paste(subsets, collapse = ",")
@@ -24,6 +53,24 @@ get_font_info <- function(id, subsets = NULL) {
 }
 
 
+
+#' Download font files
+#'
+#' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
+#' @param output_dir Output directory where to save font files.
+#' @param ... Additional parameters to API query, for example \code{variant = "regular"}.
+#'
+#' @return a character vector of the filepaths extracted to, invisibly.
+#' @export
+#'
+#' @importFrom utils unzip
+#'
+#' @examples
+#' \dontrun{
+#'
+#' download_font("robot", "path/to/directory")
+#'
+#' }
 download_font <- function(id, output_dir, ...) {
   output_dir <- normalizePath(output_dir, mustWork = TRUE)
   if (!dir.exists(output_dir)) {
