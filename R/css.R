@@ -50,7 +50,26 @@ generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../font
 }
 
 
-
+#' Use a Google Font
+#'
+#' @param font Name of the font
+#'
+#' @return an \code{htmlDependency}.
+#' @export
+#'
+#' @importFrom htmltools htmlDependency
+#'
+#' @examples
+#' # todo
+use_gfont <- function(font = c("roboto")) {
+  htmlDependency(
+    name = font,
+    version = "0.1.0",
+    src = list(href = "gfonts", file = "assets"),
+    package = "gfonts",
+    stylesheet = sprintf("css/%s.css", font)
+  )
+}
 
 
 

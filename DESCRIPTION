@@ -12,6 +12,7 @@ LazyData: true
 Imports:
   utils,
   htmltools,
+  shiny,
   crul,
   jsonlite,
   glue
