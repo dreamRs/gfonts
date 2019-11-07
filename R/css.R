@@ -20,3 +20,39 @@ glue_css <- function(font_info, path = "../fonts/") {
 }
 
 
+#' Generate CSS to import fonts
+#'
+#' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
+#' @param variants Variant of font to use.
+#' @param output Specifies path to output file for CSS generated.
+#' @param font_dir Fonts directory relative to \code{ouput}.
+#'
+#' @return a character string with CSS code (invisibly)
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' cat(generate_css("roboto", "regular"))
+#'
+#' }
+generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../fonts/") {
+  font_info <- get_font_info(id = id)
+  if (!is.null(variants)) {
+    id <- font_info$variants$id
+    font_info$variants <- font_info$variants[id %in% variants, ]
+  }
+  css <- glue_css(font_info = font_info, path = font_dir)
+  if (!is.null(output)) {
+    writeLines(text = css, con = output)
+  }
+  invisible(css)
+}
+
+
+
+
+
+
+
+
