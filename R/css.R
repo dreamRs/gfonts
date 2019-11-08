@@ -59,8 +59,7 @@ generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../font
 #'
 #' @importFrom htmltools htmlDependency attachDependencies tags
 #'
-#' @examples
-#' # todo
+#' @example examples/use_gfont.R
 use_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
                                "alegreya", "nunito-sans", "baloo", "happy-monkey",
                                "henny-penny")) {
