@@ -57,17 +57,32 @@ generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../font
 #' @return an \code{htmlDependency}.
 #' @export
 #'
-#' @importFrom htmltools htmlDependency
+#' @importFrom htmltools htmlDependency attachDependencies tags
 #'
 #' @examples
 #' # todo
-use_gfont <- function(font = c("roboto")) {
-  htmlDependency(
-    name = font,
-    version = "0.1.0",
-    src = list(href = "gfonts", file = "assets"),
-    package = "gfonts",
-    stylesheet = sprintf("css/%s.css", font)
+use_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat")) {
+
+  font <- match.arg(arg = font)
+
+  css <- switch(
+    font,
+    "roboto" = "font-family: 'Roboto', sans-serif;",
+    "open-sans" = "font-family: 'Open Sans', sans-serif;",
+    "lato" = "font-family: 'Lato', sans-serif;",
+     "montserrat" = "font-family: 'Montserrat', sans-serif;"
+  )
+  css <- sprintf("body {%s;}", css)
+
+  attachDependencies(
+    x = tags$style(css),
+    value = htmlDependency(
+      name = font,
+      version = "0.1.0",
+      src = list(href = "gfonts", file = "assets"),
+      package = "gfonts",
+      stylesheet = sprintf("css/%s.css", font)
+    )
   )
 }
 

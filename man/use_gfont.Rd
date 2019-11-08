@@ -4,7 +4,7 @@
 \alias{use_gfont}
 \title{Use a Google Font}
 \usage{
-use_gfont(font = c("roboto"))
+use_gfont(font = c("roboto", "open-sans", "lato", "montserrat"))
 }
 \arguments{
 \item{font}{Name of the font}
