@@ -61,7 +61,9 @@ generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../font
 #'
 #' @examples
 #' # todo
-use_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat")) {
+use_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
+                               "alegreya", "nunito-sans", "baloo", "happy-monkey",
+                               "henny-penny")) {
 
   font <- match.arg(arg = font)
 
@@ -70,7 +72,12 @@ use_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat")) {
     "roboto" = "font-family: 'Roboto', sans-serif;",
     "open-sans" = "font-family: 'Open Sans', sans-serif;",
     "lato" = "font-family: 'Lato', sans-serif;",
-     "montserrat" = "font-family: 'Montserrat', sans-serif;"
+    "montserrat" = "font-family: 'Montserrat', sans-serif;",
+    "alegreya" = "font-family: 'Alegreya', serif;",
+    "nunito-sans" = "font-family: 'Nunito Sans', sans-serif;",
+    "baloo" = "font-family: 'Baloo', cursive;",
+    "happy-monkey" = "font-family: 'Happy Monkey', cursive;",
+    "henny-penny" = "font-family: 'Henny Penny', cursive;"
   )
   css <- sprintf("body {%s;}", css)
 
