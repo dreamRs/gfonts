@@ -5,7 +5,10 @@ Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", role = "aut"),
   person("Mario", "Ranftl", role = c("ctb", "cph"), comment = "google-webfonts-helper"))
-Description: What the package does (one paragraph).
+Description: Download 'Google' fonts and generate CSS to use in 'rmarkdown' documents and 
+  'shiny' applications. Some popular fonts are included and ready to use.
+URL: https://github.com/dreamRs/gfonts
+BugReports: https://github.com/dreamRs/gfonts/issues
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
