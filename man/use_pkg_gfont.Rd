@@ -5,12 +5,15 @@
 \title{Use a Google Font included in package}
 \usage{
 use_pkg_gfont(font = c("roboto", "open-sans", "lato", "montserrat",
-  "alegreya", "nunito-sans", "baloo", "happy-monkey", "henny-penny"))
+  "alegreya", "nunito-sans", "baloo", "happy-monkey", "henny-penny"),
+  tag = "body")
 }
 \arguments{
 \item{font}{Name of the font to use, possible choices are: \code{"roboto"},
 \code{"open-sans"}, \code{"lato"}, \code{"montserrat"}, \code{"alegreya"},
 \code{"nunito-sans"}, \code{"baloo"}, \code{"happy-monkey"}, \code{"henny-penny"}.}
+
+\item{tag}{Tag to which to apply the font, default to \code{"body"}.}
 }
 \value{
 an \code{htmlDependency}.
