@@ -50,17 +50,22 @@ generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../font
 }
 
 
-#' Use a Google Font
+#' @title Use a Google Font included in package
 #'
-#' @param font Name of the font
+#' @description For convenience, some fonts are included in the package,
+#'  you can use them without having to download them, but only few variants are available.
+#'
+#' @param font Name of the font to use, possible choices are: \code{"roboto"},
+#'  \code{"open-sans"}, \code{"lato"}, \code{"montserrat"}, \code{"alegreya"},
+#'  \code{"nunito-sans"}, \code{"baloo"}, \code{"happy-monkey"}, \code{"henny-penny"}.
 #'
 #' @return an \code{htmlDependency}.
 #' @export
 #'
 #' @importFrom htmltools htmlDependency attachDependencies tags
 #'
-#' @example examples/use_gfont.R
-use_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
+#' @example examples/use_pkg_gfont.R
+use_pkg_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
                                "alegreya", "nunito-sans", "baloo", "happy-monkey",
                                "henny-penny")) {
 

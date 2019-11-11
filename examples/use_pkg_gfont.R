@@ -2,7 +2,7 @@ library(gfonts)
 library(htmltools)
 
 browsable(tags$div(
-  use_gfont("henny-penny"),
+  use_pkg_gfont("henny-penny"),
   tags$p(
     paste(letters, collapse = "")
   ),
