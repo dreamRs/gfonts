@@ -4,14 +4,16 @@
 \alias{download_font}
 \title{Download font files}
 \usage{
-download_font(id, output_dir, ...)
+download_font(id, output_dir, variants = NULL, ...)
 }
 \arguments{
 \item{id}{Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.}
 
 \item{output_dir}{Output directory where to save font files.}
 
-\item{...}{Additional parameters to API query, for example \code{variant = "regular"}.}
+\item{variants}{Variant(s) to download, default is to includes all available ones.}
+
+\item{...}{Additional parameters to API query.}
 }
 \value{
 a character vector of the filepaths extracted to, invisibly.
@@ -22,7 +24,18 @@ Download font files
 \examples{
 \dontrun{
 
-download_font("robot", "path/to/directory")
+# Download Roboto font
+download_font(
+  id = "robot",
+  output_dir = "path/to/directory"
+)
+
+# Get only regular, italic and bold
+download_font(
+  id = "robot",
+  output_dir = "path/to/directory",
+  variants = c("regular", "300italic", "700")
+)
 
 }
 }

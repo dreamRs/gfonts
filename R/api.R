@@ -58,7 +58,8 @@ get_font_info <- function(id, subsets = NULL) {
 #'
 #' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
 #' @param output_dir Output directory where to save font files.
-#' @param ... Additional parameters to API query, for example \code{variant = "regular"}.
+#' @param variants Variant(s) to download, default is to includes all available ones.
+#' @param ... Additional parameters to API query.
 #'
 #' @return a character vector of the filepaths extracted to, invisibly.
 #' @export
@@ -68,10 +69,23 @@ get_font_info <- function(id, subsets = NULL) {
 #' @examples
 #' \dontrun{
 #'
-#' download_font("robot", "path/to/directory")
+#' # Download Roboto font
+#' download_font(
+#'   id = "robot",
+#'   output_dir = "path/to/directory"
+#' )
+#'
+#' # Get only regular, italic and bold
+#' download_font(
+#'   id = "robot",
+#'   output_dir = "path/to/directory",
+#'   variants = c("regular", "300italic", "700")
+#' )
 #'
 #' }
-download_font <- function(id, output_dir, ...) {
+download_font <- function(id, output_dir, variants = NULL, ...) {
+  if (length(variants) > 1)
+    variants <- paste(variants, collapse = ",")
   output_dir <- normalizePath(output_dir, mustWork = TRUE)
   if (!dir.exists(output_dir)) {
     stop("'output_dir' must be a valid directory!")
