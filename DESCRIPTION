@@ -12,6 +12,7 @@ BugReports: https://github.com/dreamRs/gfonts/issues
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 2.10)
 Imports:
   utils,
   htmltools,
@@ -19,4 +20,4 @@ Imports:
   crul,
   jsonlite,
   glue
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
