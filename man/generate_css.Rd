@@ -4,8 +4,7 @@
 \alias{generate_css}
 \title{Generate CSS to import fonts}
 \usage{
-generate_css(id, variants = NULL, output = NULL,
-  font_dir = "../fonts/")
+generate_css(id, variants = NULL, output = NULL, font_dir = "../fonts/")
 }
 \arguments{
 \item{id}{Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.}

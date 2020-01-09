@@ -4,9 +4,11 @@
 \alias{use_pkg_gfont}
 \title{Use a Google Font included in package}
 \usage{
-use_pkg_gfont(font = c("roboto", "open-sans", "lato", "montserrat",
-  "alegreya", "nunito-sans", "baloo", "happy-monkey", "henny-penny"),
-  tag = "body")
+use_pkg_gfont(
+  font = c("roboto", "open-sans", "lato", "montserrat", "alegreya", "nunito-sans",
+    "baloo", "happy-monkey", "henny-penny"),
+  tag = "body"
+)
 }
 \arguments{
 \item{font}{Name of the font to use, possible choices are: \code{"roboto"},
