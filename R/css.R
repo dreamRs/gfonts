@@ -50,7 +50,7 @@ generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../font
 }
 
 
-#' @title Use a Google Font included in package
+#' @title Use a Google Font included in {gfonts}
 #'
 #' @description For convenience, some fonts are included in the package,
 #'  you can use them without having to download them, but only few variants are available.
@@ -73,6 +73,8 @@ use_pkg_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
                           tag = "body") {
 
   font <- match.arg(arg = font)
+
+  tag <- paste(tag, collapse = ", ")
 
   css <- switch(
     font,
