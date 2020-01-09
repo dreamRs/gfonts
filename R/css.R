@@ -6,9 +6,14 @@ glue_css <- function(font_info, path = "../fonts/") {
   res <- lapply(
     X = seq_len(nrow(font_info$variants)),
     FUN = function(i) {
+      variant <- font_info$variants[i, ]
+      if (is.null(variant$local))
+        variant$local <-  list(c("", ""))
+      if (length(variant$local[[1]]) == 1)
+        variant$local <- list(c(variant$local[[1]], ""))
       glue::glue(
         template,
-        variant = font_info$variants[i, ],
+        variant = variant,
         fontItem = font_info,
         folderPrefix = path
       )
