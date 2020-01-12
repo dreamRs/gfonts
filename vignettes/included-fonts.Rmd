@@ -1,0 +1,175 @@
+---
+title: "Included fonts"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{included-fonts}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(gfonts)
+```
+
+
+
+## Roboto
+
+```{r}
+use_pkg_gfont("roboto", selector = ".example-roboto")
+```
+
+<div class="example-roboto">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+## Open sans
+
+```{r}
+use_pkg_gfont("open-sans", selector = ".example-open-sans")
+```
+
+<div class="example-open-sans">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+## Lato
+
+```{r}
+use_pkg_gfont("lato", selector = ".example-lato")
+```
+
+<div class="example-lato">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+
+## Montserrat
+
+```{r}
+use_pkg_gfont("montserrat", selector = ".example-montserrat")
+```
+
+<div class="example-montserrat">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+## Alegreya
+
+```{r}
+use_pkg_gfont("alegreya", selector = ".example-alegreya")
+```
+
+<div class="example-alegreya">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+
+## Nunito sans
+
+```{r}
+use_pkg_gfont("nunito-sans", selector = ".example-nunito-sans")
+```
+
+<div class="example-nunito-sans">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+
+## Baloo
+
+```{r}
+use_pkg_gfont("baloo", selector = ".example-baloo")
+```
+
+<div class="example-baloo">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+
+## Happy monkey
+
+```{r}
+use_pkg_gfont("happy-monkey", selector = ".example-happy-monkey")
+```
+
+<div class="example-happy-monkey">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+
+## Henny Penny
+
+```{r}
+use_pkg_gfont("henny-penny", selector = ".example-henny-penny")
+```
+
+<div class="example-henny-penny">
+<p>abcdefghijklmnopqrstuvwxyz</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
+<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+</div>
+
+
+
+
+
+
