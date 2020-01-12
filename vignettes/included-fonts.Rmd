@@ -19,6 +19,46 @@ library(gfonts)
 ```
 
 
+```{r, echo=FALSE}
+library(htmltools)
+make_example <- function(class) {
+  tags$div(
+    class = class,
+    tags$blockquote(
+      tags$p(HTML("&Eacute;coutez !")),
+      tags$p(HTML("Puisqu&rsquo;on allume les &eacute;toiles,")),
+      tags$p(HTML("C&rsquo;est qu&rsquo;elles sont &agrave; quelqu&rsquo;un n&eacute;cessaires ?")),
+      tags$p(HTML("C&rsquo;est que quelqu&rsquo;un d&eacute;sire qu&rsquo;elles soient ?")),
+      tags$br(),
+      tags$p(HTML("Vladimir Ma&iuml;akovski &ndash; &Eacute;coutez !"))
+    ),
+    tags$p(
+      paste(letters, collapse = "")
+    ),
+    tags$p(
+      paste(LETTERS, collapse = "")
+    ),
+    tags$p(
+      style = "font-weight: bold;",
+      paste(letters, collapse = "")
+    ),
+    tags$p(
+      style = "font-weight: bold;",
+      paste(LETTERS, collapse = "")
+    ),
+    tags$p(
+      style = "font-style: italic;",
+      paste(letters, collapse = "")
+    ),
+    tags$p(
+      style = "font-style: italic;",
+      paste(LETTERS, collapse = "")
+    )
+  )
+}
+```
+
+
 
 ## Roboto
 
@@ -26,14 +66,10 @@ library(gfonts)
 use_pkg_gfont("roboto", selector = ".example-roboto")
 ```
 
-<div class="example-roboto">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
+```{r, echo=FALSE, results='asis'}
+make_example("example-roboto")
+```
+
 
 
 ## Open sans
@@ -42,14 +78,9 @@ use_pkg_gfont("roboto", selector = ".example-roboto")
 use_pkg_gfont("open-sans", selector = ".example-open-sans")
 ```
 
-<div class="example-open-sans">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
+```{r, echo=FALSE, results='asis'}
+make_example("example-open-sans")
+```
 
 
 ## Lato
@@ -58,14 +89,9 @@ use_pkg_gfont("open-sans", selector = ".example-open-sans")
 use_pkg_gfont("lato", selector = ".example-lato")
 ```
 
-<div class="example-lato">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
+```{r, echo=FALSE, results='asis'}
+make_example("example-lato")
+```
 
 
 
@@ -75,14 +101,9 @@ use_pkg_gfont("lato", selector = ".example-lato")
 use_pkg_gfont("montserrat", selector = ".example-montserrat")
 ```
 
-<div class="example-montserrat">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
+```{r, echo=FALSE, results='asis'}
+make_example("example-montserrat")
+```
 
 
 ## Alegreya
@@ -91,14 +112,9 @@ use_pkg_gfont("montserrat", selector = ".example-montserrat")
 use_pkg_gfont("alegreya", selector = ".example-alegreya")
 ```
 
-<div class="example-alegreya">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
+```{r, echo=FALSE, results='asis'}
+make_example("example-alegreya")
+```
 
 
 
@@ -108,14 +124,10 @@ use_pkg_gfont("alegreya", selector = ".example-alegreya")
 use_pkg_gfont("nunito-sans", selector = ".example-nunito-sans")
 ```
 
-<div class="example-nunito-sans">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
+```{r, echo=FALSE, results='asis'}
+make_example("example-nunito-sans")
+```
+
 
 
 
@@ -125,15 +137,9 @@ use_pkg_gfont("nunito-sans", selector = ".example-nunito-sans")
 use_pkg_gfont("baloo", selector = ".example-baloo")
 ```
 
-<div class="example-baloo">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
-
+```{r, echo=FALSE, results='asis'}
+make_example("example-baloo")
+```
 
 
 ## Happy monkey
@@ -142,14 +148,9 @@ use_pkg_gfont("baloo", selector = ".example-baloo")
 use_pkg_gfont("happy-monkey", selector = ".example-happy-monkey")
 ```
 
-<div class="example-happy-monkey">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
+```{r, echo=FALSE, results='asis'}
+make_example("example-happy-monkey")
+```
 
 
 
@@ -159,14 +160,10 @@ use_pkg_gfont("happy-monkey", selector = ".example-happy-monkey")
 use_pkg_gfont("henny-penny", selector = ".example-henny-penny")
 ```
 
-<div class="example-henny-penny">
-<p>abcdefghijklmnopqrstuvwxyz</p>
-<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-weight: bold;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-weight: bold;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p style="font-style: italic;">abcdefghijklmnopqrstuvwxyz</p>
-<p style="font-style: italic;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-</div>
+```{r, echo=FALSE, results='asis'}
+make_example("example-henny-penny")
+```
+
 
 
 
