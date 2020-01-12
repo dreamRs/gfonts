@@ -7,7 +7,7 @@
 use_pkg_gfont(
   font = c("roboto", "open-sans", "lato", "montserrat", "alegreya", "nunito-sans",
     "baloo", "happy-monkey", "henny-penny"),
-  tag = "body"
+  selector = "body"
 )
 }
 \arguments{
@@ -15,7 +15,8 @@ use_pkg_gfont(
 \code{"open-sans"}, \code{"lato"}, \code{"montserrat"}, \code{"alegreya"},
 \code{"nunito-sans"}, \code{"baloo"}, \code{"happy-monkey"}, \code{"henny-penny"}.}
 
-\item{tag}{Tag to which to apply the font, default to \code{"body"}.}
+\item{selector}{CSS selector for which to use the font,
+usually an HTML tag, default to \code{"body"} (all document).}
 }
 \value{
 an \code{htmlDependency}.

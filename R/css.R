@@ -63,7 +63,8 @@ generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../font
 #' @param font Name of the font to use, possible choices are: \code{"roboto"},
 #'  \code{"open-sans"}, \code{"lato"}, \code{"montserrat"}, \code{"alegreya"},
 #'  \code{"nunito-sans"}, \code{"baloo"}, \code{"happy-monkey"}, \code{"henny-penny"}.
-#' @param tag Tag to which to apply the font, default to \code{"body"}.
+#' @param selector CSS selector for which to use the font,
+#'  usually an HTML tag, default to \code{"body"} (all document).
 #'
 #' @return an \code{htmlDependency}.
 #' @export
@@ -75,11 +76,11 @@ generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../font
 use_pkg_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
                                    "alegreya", "nunito-sans", "baloo", "happy-monkey",
                                    "henny-penny"),
-                          tag = "body") {
+                          selector = "body") {
 
   font <- match.arg(arg = font)
 
-  tag <- paste(tag, collapse = ", ")
+  selector <- paste(selector, collapse = ", ")
 
   css <- switch(
     font,
@@ -93,7 +94,7 @@ use_pkg_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
     "happy-monkey" = "font-family: 'Happy Monkey', cursive;",
     "henny-penny" = "font-family: 'Henny Penny', cursive;"
   )
-  css <- glue::glue("{tag} {{{css}}}", tag = tag, css = css)
+  css <- glue::glue("{selector} {{{css}}}", selector = selector, css = css)
   css <- paste(css, collapse = "\n")
 
   attachDependencies(

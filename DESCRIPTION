@@ -19,5 +19,6 @@ Imports:
   shiny,
   crul,
   jsonlite,
-  glue
+  glue, 
+  usethis
 RoxygenNote: 7.0.2
