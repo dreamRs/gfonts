@@ -12,10 +12,15 @@
 #'
 #' @examples
 #' \donttest{
+#'
+#'
+#' # In a Shiny app, you can use the www/ directory
+#' # in Markdown, use a subfolder of your Rmd directory
 #' setup_font(
 #'   id = "open-sans-condensed",
 #'   output_dir = "path/to/www"
 #' )
+#'
 #' }
 setup_font <- function(id, output_dir, variants = NULL) {
 

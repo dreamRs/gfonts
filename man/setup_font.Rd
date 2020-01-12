@@ -21,9 +21,14 @@ Setup a font to be used in Shiny or Markdown
 }
 \examples{
 \donttest{
+
+
+# In a Shiny app, you can use the www/ directory
+# in Markdown, use a subfolder of your Rmd directory
 setup_font(
   id = "open-sans-condensed",
   output_dir = "path/to/www"
 )
+
 }
 }

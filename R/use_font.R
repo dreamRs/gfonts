@@ -14,7 +14,7 @@
 #' @importFrom htmltools tags attachDependencies htmlDependency
 #' @importFrom shiny addResourcePath
 #'
-#' @example
+#' @example examples/ex-use_font.R
 use_font <- function(id, css_path, selector = "body", css = NULL) {
 
   path <- normalizePath(path = css_path, mustWork = TRUE)
