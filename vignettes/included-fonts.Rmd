@@ -60,7 +60,7 @@ make_example <- function(class) {
 
 
 
-## Roboto
+## Roboto {.example-roboto}
 
 ```{r}
 use_pkg_gfont("roboto", selector = ".example-roboto")
@@ -72,7 +72,7 @@ make_example("example-roboto")
 
 
 
-## Open sans
+## Open sans {.example-open-sans}
 
 ```{r}
 use_pkg_gfont("open-sans", selector = ".example-open-sans")
@@ -83,7 +83,7 @@ make_example("example-open-sans")
 ```
 
 
-## Lato
+## Lato {.example-lato}
 
 ```{r}
 use_pkg_gfont("lato", selector = ".example-lato")
@@ -95,7 +95,7 @@ make_example("example-lato")
 
 
 
-## Montserrat
+## Montserrat {.example-montserrat}
 
 ```{r}
 use_pkg_gfont("montserrat", selector = ".example-montserrat")
@@ -106,7 +106,8 @@ make_example("example-montserrat")
 ```
 
 
-## Alegreya
+
+## Alegreya {.example-alegreya}
 
 ```{r}
 use_pkg_gfont("alegreya", selector = ".example-alegreya")
@@ -118,7 +119,7 @@ make_example("example-alegreya")
 
 
 
-## Nunito sans
+## Nunito sans {.example-nunito-sans}
 
 ```{r}
 use_pkg_gfont("nunito-sans", selector = ".example-nunito-sans")
@@ -130,8 +131,7 @@ make_example("example-nunito-sans")
 
 
 
-
-## Baloo
+## Baloo {.example-baloo}
 
 ```{r}
 use_pkg_gfont("baloo", selector = ".example-baloo")
@@ -142,7 +142,8 @@ make_example("example-baloo")
 ```
 
 
-## Happy monkey
+
+## Happy monkey {.example-happy-monkey}
 
 ```{r}
 use_pkg_gfont("happy-monkey", selector = ".example-happy-monkey")
@@ -154,7 +155,7 @@ make_example("example-happy-monkey")
 
 
 
-## Henny Penny
+## Henny Penny {.example-henny-penny}
 
 ```{r}
 use_pkg_gfont("henny-penny", selector = ".example-henny-penny")
