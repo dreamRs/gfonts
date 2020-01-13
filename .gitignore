@@ -4,3 +4,5 @@
 .Ruserdata
 *.Rproj
 inst/doc
+examples/markdown/assets/
+examples/markdown/*.html
