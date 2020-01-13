@@ -1,10 +1,6 @@
 ---
 title: "Included fonts"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{included-fonts}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output: rmarkdown::html_document
 ---
 
 ```{r, include = FALSE}
@@ -19,45 +15,6 @@ library(gfonts)
 ```
 
 
-```{r, echo=FALSE}
-library(htmltools)
-make_example <- function(class) {
-  tags$div(
-    class = class,
-    tags$blockquote(
-      tags$p(HTML("&Eacute;coutez !")),
-      tags$p(HTML("Puisqu&rsquo;on allume les &eacute;toiles,")),
-      tags$p(HTML("C&rsquo;est qu&rsquo;elles sont &agrave; quelqu&rsquo;un n&eacute;cessaires ?")),
-      tags$p(HTML("C&rsquo;est que quelqu&rsquo;un d&eacute;sire qu&rsquo;elles soient ?")),
-      tags$br(),
-      tags$p(HTML("Vladimir Ma&iuml;akovski &ndash; &Eacute;coutez !"))
-    ),
-    tags$p(
-      paste(letters, collapse = "")
-    ),
-    tags$p(
-      paste(LETTERS, collapse = "")
-    ),
-    tags$p(
-      style = "font-weight: bold;",
-      paste(letters, collapse = "")
-    ),
-    tags$p(
-      style = "font-weight: bold;",
-      paste(LETTERS, collapse = "")
-    ),
-    tags$p(
-      style = "font-style: italic;",
-      paste(letters, collapse = "")
-    ),
-    tags$p(
-      style = "font-style: italic;",
-      paste(LETTERS, collapse = "")
-    )
-  )
-}
-```
-
 
 
 ## Roboto {.example-roboto}
@@ -67,7 +24,7 @@ use_pkg_gfont("roboto", selector = ".example-roboto")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-roboto")
+tag_example("example-roboto")
 ```
 
 
@@ -79,7 +36,7 @@ use_pkg_gfont("open-sans", selector = ".example-open-sans")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-open-sans")
+tag_example("example-open-sans")
 ```
 
 
@@ -90,7 +47,7 @@ use_pkg_gfont("lato", selector = ".example-lato")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-lato")
+tag_example("example-lato")
 ```
 
 
@@ -102,7 +59,7 @@ use_pkg_gfont("montserrat", selector = ".example-montserrat")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-montserrat")
+tag_example("example-montserrat")
 ```
 
 
@@ -114,7 +71,7 @@ use_pkg_gfont("alegreya", selector = ".example-alegreya")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-alegreya")
+tag_example("example-alegreya")
 ```
 
 
@@ -126,7 +83,7 @@ use_pkg_gfont("nunito-sans", selector = ".example-nunito-sans")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-nunito-sans")
+tag_example("example-nunito-sans")
 ```
 
 
@@ -138,7 +95,7 @@ use_pkg_gfont("baloo", selector = ".example-baloo")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-baloo")
+tag_example("example-baloo")
 ```
 
 
@@ -150,7 +107,7 @@ use_pkg_gfont("happy-monkey", selector = ".example-happy-monkey")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-happy-monkey")
+tag_example("example-happy-monkey")
 ```
 
 
@@ -162,7 +119,7 @@ use_pkg_gfont("henny-penny", selector = ".example-henny-penny")
 ```
 
 ```{r, echo=FALSE, results='asis'}
-make_example("example-henny-penny")
+tag_example("example-henny-penny")
 ```
 
 
