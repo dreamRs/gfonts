@@ -47,7 +47,7 @@ use_font <- function(id, css_path, selector = "body", css = NULL) {
         href = paste("gfonts", id, sep = "-"),
         file = dirname(dirname(path))
       ),
-      package = "gfonts",
+      package = NULL,
       stylesheet = file.path("css", basename(path)),
       all_files = TRUE
     )
