@@ -26,13 +26,13 @@ Download font files
 
 # Download Roboto font
 download_font(
-  id = "robot",
+  id = "roboto",
   output_dir = "path/to/directory"
 )
 
 # Get only regular, italic and bold
 download_font(
-  id = "robot",
+  id = "roboto",
   output_dir = "path/to/directory",
   variants = c("regular", "300italic", "700")
 )
