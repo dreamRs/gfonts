@@ -10,10 +10,125 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>", 
+  eval = FALSE
 )
 ```
 
-```{r setup}
+```{r setup, eval=TRUE}
 library(gfonts)
 ```
+
+{gfonts} allow you to use a [Google font](https://fonts.google.com/) to use it offline in a Shiny application or a R Markdown document. You can download a font via [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) and generate appropriate CSS to use it.
+
+
+## Setup a font to use in your project
+
+In your project directory, use `setup_font` once to download a font and generate CSS code. For example to use the [Roboto font](https://fonts.google.com/specimen/Roboto), you can do :
+
+```{r}
+setup_font(
+  id = "roboto",
+  output_dir = "www",
+  variants = "regular"
+)
+```
+
+In a Shiny application you can use `www/` folder, for R Markdown, create a sub-folder at the same level as your `.Rmd` file.
+
+`setup_font()` will create two sub-folders, containing the following files :
+
+```
+www
++-- css
+|   \-- roboto.css
+\-- fonts
+    +-- roboto-v20-latin-regular.eot
+    +-- roboto-v20-latin-regular.svg
+    +-- roboto-v20-latin-regular.ttf
+    +-- roboto-v20-latin-regular.woff
+    \-- roboto-v20-latin-regular.woff2
+```
+
+
+To know all fonts and their ids, you can use `get_all_fonts()` :
+
+```{r, eval=TRUE}
+head(get_all_fonts())
+```
+
+
+## Use a font
+
+To use a downloaded font, you can use in your UI or in a chunk :
+
+```{r}
+gfonts::use_font("roboto", "www/css/indie-flower.css")
+```
+
+First argument is the id of font downloaded, second is path to CSS file generated.
+
+
+An other solution in Shiny application is to import the CSS file in a link tag and add a style tag:
+
+```{r}
+fluidPage(
+  
+  tags$link(rel = "stylesheet", type = "text/css", href = "css/roboto.css"),
+  tags$style("body {font-family: 'Roboto', sans-serif;}")
+  
+)
+```
+
+In Markdown, import CSS file in yaml header, and add a CSS chunk :
+
+
+``````
+---
+output: 
+  html_document:
+    css: assets/css/roboto.css
+---
+
+```{css}
+body {font-family: 'Roboto', sans-serif;}
+```
+
+``````
+
+
+
+
+## Download a font
+
+If you only want to download a font, you can use:
+
+```{r}
+download_font(
+  id = "roboto",
+  output_dir = "azerty",
+  variants = c("regular", "300italic", "700")
+)
+```
+
+
+## Generate CSS
+
+To download CSS code to import a font in HTML, you can use:
+
+```{r}
+generate_css("roboto", "regular", font_dir = "path/to/font")
+```
+
+```{r, eval=TRUE, echo=FALSE}
+cat(generate_css("roboto", "regular", font_dir = "path/to/"))
+```
+
+The path must be relative to the one were this code is saved.
+
+
+
+
+
+
+
