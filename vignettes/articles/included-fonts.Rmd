@@ -14,6 +14,74 @@ knitr::opts_chunk$set(
 library(gfonts)
 ```
 
+9 fonts are included in {gfonts} and ready to use! Here's a comparison, more examples below.
+
+```{r, echo=FALSE}
+library(htmltools)
+style <- "border: 1px dashed #112446; padding: 10px;"
+tags$div(
+  style = paste0(
+    "display: grid;",
+    "grid-template-columns: repeat(3, 1fr);",
+    "grid-template-rows: repeat(3, 1fr);",
+    "grid-column-gap: 10px;","grid-row-gap: 10px;"
+  ),
+  tags$div(
+    class = "example-roboto",
+    style = style,
+    title = "roboto",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  ),
+  tags$div(
+    class = "example-open-sans",
+    style = style,
+    title = "open-sans",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  ),
+  tags$div(
+    class = "example-lato",
+    style = style,
+    title = "lato",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  ),
+  tags$div(
+    class = "example-montserrat",
+    style = style,
+    title = "montserrat",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  ),
+  tags$div(
+    class = "example-alegreya",
+    style = style,
+    title = "alegreya",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  ),
+  tags$div(
+    class = "example-nunito-sans",
+    style = style,
+    title = "nunito-sans",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  ),
+  tags$div(
+    class = "example-baloo",
+    style = style,
+    title = "baloo",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  ),
+  tags$div(
+    class = "example-happy-monkey",
+    style = style,
+    title = "happy-monkey",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  ),
+  tags$div(
+    class = "example-henny-penny",
+    style = style,
+    title = "henny-penny",
+    "La fin d’une chose marque le commencement d’une nouvelle."
+  )
+)
+```
 
 
 
