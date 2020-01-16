@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-> Download 'Google' fonts and generate CSS to use in 'rmarkdown' documents and 'shiny' applications. Some popular fonts are included and ready to use.
+> Download 'Google' fonts (via [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts)) and generate CSS to use in [rmarkdown](https://rmarkdown.rstudio.com/) documents and [shiny](https://shiny.rstudio.com/) applications. Some popular fonts are included and ready to use.
 
 
 ## Installation
