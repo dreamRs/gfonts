@@ -25,12 +25,38 @@ devtools::install_github("dreamRs/gfonts")
 
 ## Download a font to use it locally
 
-This is a basic example which shows you how to solve a common problem:
+Get the ID of the desired font between 977 available :
 
 ``` r
 library(gfonts)
-## basic example code
+get_all_fonts()
 ```
+
+Download the files necessary for its use and generate the appropriate
+CSS code :
+
+``` r
+setup_font(
+  id = "roboto",
+  output_dir = "path/to"
+)
+```
+
+Use it in {shiny} or {rmarkdown} :
+
+``` r
+use_font("roboto", "www/css/roboto.css")
+```
+
+## Included fonts
+
+Some fonts are included in the package and ready tu use :
+
+``` r
+use_pkg_gfont("roboto")
+```
+
+![](man/figures/included-fonts.png)
 
 ## Related packages
 
