@@ -7,6 +7,10 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build
+status](https://travis-ci.org/dreamRs/gfonts.svg?branch=master)](https://travis-ci.org/dreamRs/gfonts)
+[![Codecov test
+coverage](https://codecov.io/gh/dreamRs/gfonts/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamRs/gfonts?branch=master)
 <!-- badges: end -->
 
 > Download ‘Google’ fonts (via
