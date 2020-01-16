@@ -63,7 +63,7 @@ head(get_all_fonts())
 To use a downloaded font, you can use in your UI or in a chunk :
 
 ```{r}
-gfonts::use_font("roboto", "www/css/indie-flower.css")
+use_font("roboto", "www/css/roboto.css")
 ```
 
 First argument is the id of font downloaded, second is path to CSS file generated.
