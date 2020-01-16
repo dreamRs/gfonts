@@ -29,21 +29,21 @@ test_that("get_font_info works", {
 
 
 
-# test_that("download_font works", {
-#   vcr::use_cassette("download_font", {
-#
-#     tmp <- tempfile()
-#     dir.create(tmp)
-#
-#     download_font(
-#       id = "roboto",
-#       output_dir = tmp,
-#       variants = c("regular", "300italic", "700")
-#     )
-#
-#     expect_true(length(list.files(tmp)) > 1)
-#
-#     unlink(x = tmp, recursive = TRUE)
-#   })
-# })
+test_that("download_font works", {
+  # vcr::use_cassette("download_font", {
+  testthat::skip_if_offline()
+    tmp <- tempfile()
+    dir.create(tmp)
+
+    download_font(
+      id = "roboto",
+      output_dir = tmp,
+      variants = "regular"
+    )
+
+    expect_true(length(list.files(tmp)) > 1)
+
+    unlink(x = tmp, recursive = TRUE)
+  # })
+})
 
