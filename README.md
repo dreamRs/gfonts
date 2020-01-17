@@ -54,6 +54,9 @@ Use it in {shiny} or {rmarkdown} :
 use_font("roboto", "www/css/roboto.css")
 ```
 
+:point\_right: [See detailled
+example](https://dreamrs.github.io/gfonts/articles/gfonts.html)
+
 ## Included fonts
 
 Some fonts are included in the package and ready tu use :
@@ -63,6 +66,9 @@ use_pkg_gfont("roboto")
 ```
 
 ![](man/figures/included-fonts.png)
+
+:point\_right: [See all fonts
+available](https://dreamrs.github.io/gfonts/articles/articles/included-fonts.html)
 
 ## Related packages
 
