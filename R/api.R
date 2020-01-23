@@ -92,7 +92,7 @@ download_font <- function(id, output_dir, variants = NULL, ...) {
   }
   output_dir <- gsub(pattern = "\\\\$", replacement = "", x = output_dir)
   path <- paste0("/api/fonts/", id)
-  res <- get_gf(path, list(download = "zip", variants = variants, ...))
+  res <- get_gf(path, dropNulls(list(download = "zip", variants = variants, ...)))
   tmp <- tempfile(fileext = ".zip")
   on.exit(unlink(tmp))
   writeBin(object = res$content, con = tmp)

@@ -1,6 +1,6 @@
 Package: gfonts
 Title: Offline 'Google' Fonts for 'Markdown' and 'Shiny'
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", role = "aut"),
