@@ -4,6 +4,8 @@
 #' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
 #' @param output_dir Output directory where to save font and CSS files. Must be a directory.
 #' @param variants Variant(s) to download, default is to includes all available ones.
+#' @param prefer_local_source Generate CSS font-face rules in which user installed fonts are 
+#'     preferred. Use \code{FALSE} if you want to force the use of the downloaded font.  
 #'
 #' @return To directories will be created (if they do not exist): \strong{fonts} and \strong{css}.
 #' @export
@@ -22,7 +24,7 @@
 #' )
 #'
 #' }
-setup_font <- function(id, output_dir, variants = NULL) {
+setup_font <- function(id, output_dir, variants = NULL, prefer_local_source = TRUE) {
 
   output_dir <- normalizePath(path = output_dir, mustWork = TRUE)
   dir_info <- file.info(output_dir)
@@ -47,7 +49,8 @@ setup_font <- function(id, output_dir, variants = NULL) {
     id = id,
     variants = variants,
     output = file.path(css_dir, paste0(id, ".css")),
-    font_dir = "../fonts/"
+    font_dir = "../fonts/",
+    prefer_local_source = prefer_local_source
   )
   usethis::ui_done("CSS generated")
 

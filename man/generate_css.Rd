@@ -4,7 +4,13 @@
 \alias{generate_css}
 \title{Generate CSS to import fonts}
 \usage{
-generate_css(id, variants = NULL, output = NULL, font_dir = "../fonts/")
+generate_css(
+  id,
+  variants = NULL,
+  output = NULL,
+  font_dir = "../fonts/",
+  prefer_local_source = TRUE
+)
 }
 \arguments{
 \item{id}{Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.}
@@ -14,6 +20,9 @@ generate_css(id, variants = NULL, output = NULL, font_dir = "../fonts/")
 \item{output}{Specifies path to output file for CSS generated.}
 
 \item{font_dir}{Fonts directory relative to \code{ouput}.}
+
+\item{prefer_local_source}{Generate CSS font-face rules in which user installed fonts are 
+preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
 }
 \value{
 a character string with CSS code (invisibly)
