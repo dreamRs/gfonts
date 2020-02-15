@@ -66,7 +66,7 @@ use_font("roboto", "www/css/roboto.css")
 
 ## Included fonts
 
-Some fonts are included in the package and ready tu use :
+Some fonts are included in the package and ready to use :
 
 ```{r included-fonts, eval=FALSE}
 use_pkg_gfont("roboto")
