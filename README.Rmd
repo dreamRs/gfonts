@@ -59,7 +59,7 @@ Use it in {shiny} or {rmarkdown} :
 use_font("roboto", "www/css/roboto.css")
 ```
 
-:point_right: [See detailled example](https://dreamrs.github.io/gfonts/articles/gfonts.html)
+:point_right: [See detailed example](https://dreamrs.github.io/gfonts/articles/gfonts.html)
 
 
 
