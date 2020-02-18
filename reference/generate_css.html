@@ -129,7 +129,13 @@
     <p>Generate CSS to import fonts</p>
     </div>
 
-    <pre class="usage"><span class='fu'>generate_css</span>(<span class='no'>id</span>, <span class='kw'>variants</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>font_dir</span> <span class='kw'>=</span> <span class='st'>"../fonts/"</span>)</pre>
+    <pre class="usage"><span class='fu'>generate_css</span>(
+  <span class='no'>id</span>,
+  <span class='kw'>variants</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>output</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>font_dir</span> <span class='kw'>=</span> <span class='st'>"../fonts/"</span>,
+  <span class='kw'>prefer_local_source</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -149,6 +155,11 @@
     <tr>
       <th>font_dir</th>
       <td><p>Fonts directory relative to <code>ouput</code>.</p></td>
+    </tr>
+    <tr>
+      <th>prefer_local_source</th>
+      <td><p>Generate CSS font-face rules in which user installed fonts are 
+preferred. Use <code>FALSE</code> if you want to force the use of the downloaded font.</p></td>
     </tr>
     </table>
 
