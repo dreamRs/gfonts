@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.org/dreamRs/gfonts.svg?branch=master)](https://travis-ci.org/dreamRs/gfonts)
 [![Codecov test
@@ -31,7 +31,7 @@ devtools::install_github("dreamRs/gfonts")
 
 ## Download a font to use it locally
 
-Get the ID of the desired font between 977 available :
+Get the ID of the desired font between 987 available :
 
 ``` r
 library(gfonts)
@@ -54,7 +54,7 @@ Use it in {shiny} or {rmarkdown} :
 use_font("roboto", "www/css/roboto.css")
 ```
 
-:point\_right: [See detailed
+:point\_right: [See detailled
 example](https://dreamrs.github.io/gfonts/articles/gfonts.html)
 
 ## Included fonts
