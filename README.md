@@ -59,7 +59,7 @@ example](https://dreamrs.github.io/gfonts/articles/gfonts.html)
 
 ## Included fonts
 
-Some fonts are included in the package and ready tu use :
+Some fonts are included in the package and ready to use :
 
 ``` r
 use_pkg_gfont("roboto")
