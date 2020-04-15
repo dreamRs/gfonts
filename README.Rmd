@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![Travis build status](https://travis-ci.org/dreamRs/gfonts.svg?branch=master)](https://travis-ci.org/dreamRs/gfonts)
+[![R build status](https://github.com/dreamRs/gfonts/workflows/R-CMD-check/badge.svg)](https://github.com/dreamRs/gfonts/actions)
 [![Codecov test coverage](https://codecov.io/gh/dreamRs/gfonts/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamRs/gfonts?branch=master)
 <!-- badges: end -->
 
