@@ -164,31 +164,35 @@ usually an HTML tag, default to <code>"body"</code> (all document).</p></td>
     <p>an <code>htmlDependency</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>gfonts</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>htmltools</span>)
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
 
-<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/browsable.html'>browsable</a></span>(<span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>div</a></span>(
-  <span class='fu'>use_pkg_gfont</span>(<span class='st'>"open-sans"</span>),
-  <span class='fu'><a href='tag_example.html'>tag_example</a></span>(),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h1</a></span>(<span class='st'>"First level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h2</a></span>(<span class='st'>"Second level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h3</a></span>(<span class='st'>"Third level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h4</a></span>(<span class='st'>"Fourth level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h5</a></span>(<span class='st'>"Fifth level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h6</a></span>(<span class='st'>"Sixth level title"</span>)
-))
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>gfonts</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>htmltools</span>)
+
+  <span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/browsable.html'>browsable</a></span>(<span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>div</a></span>(
+    <span class='fu'>use_pkg_gfont</span>(<span class='st'>"open-sans"</span>),
+    <span class='fu'><a href='tag_example.html'>tag_example</a></span>(),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h1</a></span>(<span class='st'>"First level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h2</a></span>(<span class='st'>"Second level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h3</a></span>(<span class='st'>"Third level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h4</a></span>(<span class='st'>"Fourth level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h5</a></span>(<span class='st'>"Fifth level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h6</a></span>(<span class='st'>"Sixth level title"</span>)
+  ))
 
 
-<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/browsable.html'>browsable</a></span>(<span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>div</a></span>(
-  <span class='fu'>use_pkg_gfont</span>(<span class='st'>"henny-penny"</span>),
-  <span class='fu'><a href='tag_example.html'>tag_example</a></span>(),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h1</a></span>(<span class='st'>"First level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h2</a></span>(<span class='st'>"Second level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h3</a></span>(<span class='st'>"Third level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h4</a></span>(<span class='st'>"Fourth level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h5</a></span>(<span class='st'>"Fifth level title"</span>),
-  <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h6</a></span>(<span class='st'>"Sixth level title"</span>)
-))</div></pre>
+  <span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/browsable.html'>browsable</a></span>(<span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>div</a></span>(
+    <span class='fu'>use_pkg_gfont</span>(<span class='st'>"henny-penny"</span>),
+    <span class='fu'><a href='tag_example.html'>tag_example</a></span>(),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h1</a></span>(<span class='st'>"First level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h2</a></span>(<span class='st'>"Second level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h3</a></span>(<span class='st'>"Third level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h4</a></span>(<span class='st'>"Fourth level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h5</a></span>(<span class='st'>"Fifth level title"</span>),
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h6</a></span>(<span class='st'>"Sixth level title"</span>)
+  ))
+
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
