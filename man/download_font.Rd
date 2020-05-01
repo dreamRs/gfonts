@@ -23,8 +23,9 @@ Download font files
 }
 \examples{
 \dontrun{
-
+# For example, we use a temporary directory
 path_to_dir <- tempfile()
+dir.create(path_to_dir)
 
 # Download Roboto font
 download_font(
@@ -39,6 +40,7 @@ download_font(
   variants = c("regular", "300italic", "700")
 )
 
-unlink(path_to_dir)
+# Clean up
+unlink(path_to_dir, recursive = TRUE)
 }
 }

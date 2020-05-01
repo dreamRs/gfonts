@@ -32,8 +32,7 @@ Generate CSS to import fonts
 }
 \examples{
 \dontrun{
-
+# Generate CSS code to use Roboto font
 cat(generate_css("roboto", "regular"))
-
 }
 }

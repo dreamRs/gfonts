@@ -17,15 +17,18 @@ setup_font(id, output_dir, variants = NULL, prefer_local_source = TRUE)
 preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
 }
 \value{
-Two directories will be created (if they do not exist): \strong{fonts} and \strong{css}.
+Two directories will be created (if they do not exist)
+ in the \code{output_dir} specified: \strong{fonts} and \strong{css}.
 }
 \description{
-Setup a font to be used in Shiny or Markdown
+This function will download the specified font into a directory of your project
+ and generate CSS code to use it in a Shiny application or RMarkdown document.
 }
 \examples{
 \dontrun{
-
+# For example, we use a temporary directory
 path_to_www <- tempfile()
+dir.create(path_to_www)
 
 # In a Shiny app, you can use the www/ directory
 # in Markdown, use a subfolder of your Rmd directory
@@ -34,7 +37,7 @@ setup_font(
   output_dir = path_to_www
 )
 
-unlink(path_to_www)
-
+# Clean up
+unlink(path_to_www, recursive = TRUE)
 }
 }
