@@ -24,18 +24,21 @@ Download font files
 \examples{
 \dontrun{
 
+path_to_dir <- tempfile()
+
 # Download Roboto font
 download_font(
   id = "roboto",
-  output_dir = "path/to/directory"
+  output_dir = path_to_dir
 )
 
 # Get only regular, italic and bold
 download_font(
   id = "roboto",
-  output_dir = "path/to/directory",
+  output_dir = path_to_dir,
   variants = c("regular", "300italic", "700")
 )
 
+unlink(path_to_dir)
 }
 }

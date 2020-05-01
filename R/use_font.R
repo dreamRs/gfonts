@@ -7,7 +7,7 @@
 #'  usually an HTML tag, default to \code{"body"} (all document).
 #' @param css CSS variables needed to use font, normally this should be automatic.
 #'
-#' @return an HTML tag with a dependency.
+#' @return an HTML tag with an HTML dependency.
 #' @export
 #'
 #' @importFrom glue glue_data glue

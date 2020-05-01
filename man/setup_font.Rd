@@ -13,25 +13,28 @@ setup_font(id, output_dir, variants = NULL, prefer_local_source = TRUE)
 
 \item{variants}{Variant(s) to download, default is to includes all available ones.}
 
-\item{prefer_local_source}{Generate CSS font-face rules in which user installed fonts are 
+\item{prefer_local_source}{Generate CSS font-face rules in which user installed fonts are
 preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
 }
 \value{
-To directories will be created (if they do not exist): \strong{fonts} and \strong{css}.
+Two directories will be created (if they do not exist): \strong{fonts} and \strong{css}.
 }
 \description{
 Setup a font to be used in Shiny or Markdown
 }
 \examples{
-\donttest{
+\dontrun{
 
+path_to_www <- tempfile()
 
 # In a Shiny app, you can use the www/ directory
 # in Markdown, use a subfolder of your Rmd directory
 setup_font(
   id = "open-sans-condensed",
-  output_dir = "path/to/www"
+  output_dir = path_to_www
 )
+
+unlink(path_to_www)
 
 }
 }

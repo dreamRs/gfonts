@@ -2,7 +2,7 @@
 % Please edit documentation in R/api.R
 \name{get_font_info}
 \alias{get_font_info}
-\title{Get detailled infos about one font}
+\title{Get detailed  information about a font}
 \usage{
 get_font_info(id, subsets = NULL)
 }
@@ -15,12 +15,10 @@ get_font_info(id, subsets = NULL)
 a \code{data.frame}.
 }
 \description{
-Get detailled infos about one font
+Get detailed  information about a font
 }
 \examples{
-\donttest{
-
+\dontrun{
 roboto <- get_font_info("roboto")
-
 }
 }

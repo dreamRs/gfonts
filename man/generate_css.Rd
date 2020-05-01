@@ -21,7 +21,7 @@ generate_css(
 
 \item{font_dir}{Fonts directory relative to \code{ouput}.}
 
-\item{prefer_local_source}{Generate CSS font-face rules in which user installed fonts are 
+\item{prefer_local_source}{Generate CSS font-face rules in which user installed fonts are
 preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
 }
 \value{
@@ -31,7 +31,7 @@ a character string with CSS code (invisibly)
 Generate CSS to import fonts
 }
 \examples{
-\donttest{
+\dontrun{
 
 cat(generate_css("roboto", "regular"))
 

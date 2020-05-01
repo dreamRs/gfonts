@@ -4,6 +4,16 @@
 #' @description Download Google fonts and generate CSS to use in {rmarkdown} documents and
 #' {shiny} applications. Some popular fonts are included and ready to use.
 #'
+#' @section Download a font:
+#' Use \code{\link{setup_font}} to get a font inside your current project,
+#'  then in a \{shiny\} application or \{rmarkdown\} document, you can use
+#'  \code{\link{use_font}} to import the font.
+#'
+#'
+#' @section Ready-to-use fonts:
+#' Some fonts are included in this package and can be used directly with \code{\link{use_pkg_gfont}}.
+#'
+#'
 #' @name gfonts
 #' @docType package
 #' @author Victor Perrier (@@dreamRs_fr)

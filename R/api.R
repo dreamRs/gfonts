@@ -12,14 +12,14 @@ get_gf <- function(path, query = list(), ...) {
 
 #' Get infos about all fonts available
 #'
-#' @return a \code{data.frame}
+#' @return a \code{data.frame}.
 #' @export
 #'
 #' @importFrom jsonlite fromJSON
 #'
 #' @examples
-#' \donttest{
-#'
+#' \dontrun{
+#' # Retrieve all fonts currently available
 #' all_fonts <- get_all_fonts()
 #'
 #' }
@@ -29,7 +29,7 @@ get_all_fonts <- function() {
 }
 
 
-#' Get detailled infos about one font
+#' Get detailed  information about a font
 #'
 #' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
 #' @param subsets Select charsets, for example \code{"latin"}.
@@ -40,10 +40,8 @@ get_all_fonts <- function() {
 #' @importFrom jsonlite fromJSON
 #'
 #' @examples
-#' \donttest{
-#'
+#' \dontrun{
 #' roboto <- get_font_info("roboto")
-#'
 #' }
 get_font_info <- function(id, subsets = NULL) {
   if (!is.null(subsets))
@@ -69,19 +67,22 @@ get_font_info <- function(id, subsets = NULL) {
 #' @examples
 #' \dontrun{
 #'
+#' path_to_dir <- tempfile()
+#'
 #' # Download Roboto font
 #' download_font(
 #'   id = "roboto",
-#'   output_dir = "path/to/directory"
+#'   output_dir = path_to_dir
 #' )
 #'
 #' # Get only regular, italic and bold
 #' download_font(
 #'   id = "roboto",
-#'   output_dir = "path/to/directory",
+#'   output_dir = path_to_dir,
 #'   variants = c("regular", "300italic", "700")
 #' )
 #'
+#' unlink(path_to_dir)
 #' }
 download_font <- function(id, output_dir, variants = NULL, ...) {
   if (length(variants) > 1)

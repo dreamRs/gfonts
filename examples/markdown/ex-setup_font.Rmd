@@ -1,7 +1,6 @@
 ---
 title: "Test Font"
 author: "Victor"
-date: "13/01/2020"
 output: html_document
 ---
 
@@ -10,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-To download a font in your project, use :
+To download a font in your project, use outside of your Rmd document :
 
 ```{r demo-setup_font, eval=FALSE}
 setup_font(
@@ -22,9 +21,16 @@ setup_font(
 `assets/` is a sub-folder where the Rmd is located.
 
 
-Then in Markdown :
+Then use use a chunk like this one to import your font into your RMarkdown document :
 
-```{r ex-use_font, results='asis'}
+`````````r
+`r ''````{r ex-use_font, results='asis'}
+gfonts::use_font("indie-flower", "assets/css/indie-flower.css")
+```
+`````````
+
+
+```{r ex-use_font-bis, echo=FALSE, results='asis'}
 gfonts::use_font("indie-flower", "assets/css/indie-flower.css")
 ```
 

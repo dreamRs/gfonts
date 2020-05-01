@@ -7,14 +7,14 @@
 get_all_fonts()
 }
 \value{
-a \code{data.frame}
+a \code{data.frame}.
 }
 \description{
 Get infos about all fonts available
 }
 \examples{
-\donttest{
-
+\dontrun{
+# Retrieve all fonts currently available
 all_fonts <- get_all_fonts()
 
 }
