@@ -102,6 +102,9 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -151,27 +154,30 @@
     </tr>
     <tr>
       <th>prefer_local_source</th>
-      <td><p>Generate CSS font-face rules in which user installed fonts are 
+      <td><p>Generate CSS font-face rules in which user installed fonts are
 preferred. Use <code>FALSE</code> if you want to force the use of the downloaded font.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>To directories will be created (if they do not exist): <strong>fonts</strong> and <strong>css</strong>.</p>
+    <p>Two directories will be created (if they do not exist): <strong>fonts</strong> and <strong>css</strong>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 
+<span class='no'>path_to_www</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>()
 
 <span class='co'># In a Shiny app, you can use the www/ directory</span>
 <span class='co'># in Markdown, use a subfolder of your Rmd directory</span>
 <span class='fu'>setup_font</span>(
   <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"open-sans-condensed"</span>,
-  <span class='kw'>output_dir</span> <span class='kw'>=</span> <span class='st'>"path/to/www"</span>
-)</div><div class='output co'>#&gt; <span class='error'>Error in normalizePath(path = output_dir, mustWork = TRUE): path[1]="path/to/www": No such file or directory</span></div><div class='input'>
-# }
-</div></pre>
+  <span class='kw'>output_dir</span> <span class='kw'>=</span> <span class='no'>path_to_www</span>
+)
+
+<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>path_to_www</span>)
+
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

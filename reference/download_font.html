@@ -102,6 +102,9 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -162,19 +165,22 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 
+<span class='no'>path_to_dir</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>()
+
 <span class='co'># Download Roboto font</span>
 <span class='fu'>download_font</span>(
   <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"roboto"</span>,
-  <span class='kw'>output_dir</span> <span class='kw'>=</span> <span class='st'>"path/to/directory"</span>
+  <span class='kw'>output_dir</span> <span class='kw'>=</span> <span class='no'>path_to_dir</span>
 )
 
 <span class='co'># Get only regular, italic and bold</span>
 <span class='fu'>download_font</span>(
   <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"roboto"</span>,
-  <span class='kw'>output_dir</span> <span class='kw'>=</span> <span class='st'>"path/to/directory"</span>,
+  <span class='kw'>output_dir</span> <span class='kw'>=</span> <span class='no'>path_to_dir</span>,
   <span class='kw'>variants</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"regular"</span>, <span class='st'>"300italic"</span>, <span class='st'>"700"</span>)
 )
 
+<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>path_to_dir</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
