@@ -10,12 +10,15 @@ test_that("generate_css works", {
 })
 
 
-# test_fonts <- sample(gfonts:::fonts$id, size = 10)
+# test_fonts <- sample(gfonts:::fonts$id, size = 20)
 # test_fonts <- lapply(
 #   X = test_fonts,
-#   FUN = get_font_info
+#   FUN = function(x) {
+#     print(x)
+#     gfonts::get_font_info(x)
+#   }
 # )
-# saveRDS(object = test_fonts, file = "inst/testdata/fontsinfo.rds")
+# saveRDS(object = test_fonts, file = "inst/testdata/fontsinfo.rds", version = 2)
 
 
 test_that("glue_css works", {
