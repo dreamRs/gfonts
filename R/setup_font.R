@@ -17,7 +17,8 @@
 #' @importFrom usethis ui_done ui_todo
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
+#'
 #' # For example, we use a temporary directory
 #' path_to_www <- tempfile()
 #' dir.create(path_to_www)
@@ -31,6 +32,7 @@
 #'
 #' # Clean up
 #' unlink(path_to_www, recursive = TRUE)
+#'
 #' }
 setup_font <- function(id, output_dir, variants = NULL, prefer_local_source = TRUE) {
 

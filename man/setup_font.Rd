@@ -25,7 +25,8 @@ This function will download the specified font into a directory of your project
  and generate CSS code to use it in a Shiny application or RMarkdown document.
 }
 \examples{
-\dontrun{
+if (interactive()) {
+
 # For example, we use a temporary directory
 path_to_www <- tempfile()
 dir.create(path_to_www)
@@ -39,5 +40,6 @@ setup_font(
 
 # Clean up
 unlink(path_to_www, recursive = TRUE)
+
 }
 }

@@ -18,9 +18,10 @@ get_gf <- function(path, query = list(), ...) {
 #' @importFrom jsonlite fromJSON
 #'
 #' @examples
-#' \dontrun{
-#' # Retrieve all fonts currently available
-#' all_fonts <- get_all_fonts()
+#' if (interactive()) {
+#'
+#'  # Retrieve all fonts currently available
+#'  all_fonts <- get_all_fonts()
 #'
 #' }
 get_all_fonts <- function() {
@@ -40,8 +41,11 @@ get_all_fonts <- function() {
 #' @importFrom jsonlite fromJSON
 #'
 #' @examples
-#' \dontrun{
-#' roboto <- get_font_info("roboto")
+#' if (interactive()) {
+#'
+#'  # Info about Roboto
+#'  roboto <- get_font_info("roboto")
+#'
 #' }
 get_font_info <- function(id, subsets = NULL) {
   if (!is.null(subsets))
@@ -65,7 +69,8 @@ get_font_info <- function(id, subsets = NULL) {
 #' @importFrom utils unzip
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
+#'
 #' # For example, we use a temporary directory
 #' path_to_dir <- tempfile()
 #' dir.create(path_to_dir)
@@ -85,6 +90,7 @@ get_font_info <- function(id, subsets = NULL) {
 #'
 #' # Clean up
 #' unlink(path_to_dir, recursive = TRUE)
+#'
 #' }
 download_font <- function(id, output_dir, variants = NULL, ...) {
   if (length(variants) > 1)

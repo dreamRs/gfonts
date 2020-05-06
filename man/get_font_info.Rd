@@ -18,7 +18,10 @@ a \code{data.frame}.
 Get detailed  information about a font
 }
 \examples{
-\dontrun{
-roboto <- get_font_info("roboto")
+if (interactive()) {
+
+ # Info about Roboto
+ roboto <- get_font_info("roboto")
+
 }
 }

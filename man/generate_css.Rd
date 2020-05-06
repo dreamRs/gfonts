@@ -31,8 +31,10 @@ a character string with CSS code (invisibly)
 Generate CSS to import fonts
 }
 \examples{
-\dontrun{
+if (interactive()) {
+
 # Generate CSS code to use Roboto font
 cat(generate_css("roboto", "regular"))
+
 }
 }

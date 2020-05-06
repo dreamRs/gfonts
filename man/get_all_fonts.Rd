@@ -13,9 +13,10 @@ a \code{data.frame}.
 Get infos about all fonts available
 }
 \examples{
-\dontrun{
-# Retrieve all fonts currently available
-all_fonts <- get_all_fonts()
+if (interactive()) {
+
+ # Retrieve all fonts currently available
+ all_fonts <- get_all_fonts()
 
 }
 }

@@ -38,9 +38,11 @@ glue_css <- function(font_info, path = "../fonts/") {
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
+#'
 #' # Generate CSS code to use Roboto font
 #' cat(generate_css("roboto", "regular"))
+#'
 #' }
 generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../fonts/",
                          prefer_local_source = TRUE) {

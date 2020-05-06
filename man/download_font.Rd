@@ -22,7 +22,8 @@ a character vector of the filepaths extracted to, invisibly.
 Download font files
 }
 \examples{
-\dontrun{
+if (interactive()) {
+
 # For example, we use a temporary directory
 path_to_dir <- tempfile()
 dir.create(path_to_dir)
@@ -42,5 +43,6 @@ download_font(
 
 # Clean up
 unlink(path_to_dir, recursive = TRUE)
+
 }
 }
