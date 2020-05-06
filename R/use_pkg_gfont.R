@@ -15,6 +15,7 @@
 #'
 #' @importFrom htmltools htmlDependency attachDependencies tags
 #' @importFrom glue glue
+#' @importFrom utils packageVersion
 #'
 #' @example examples/ex-use_pkg_gfont.R
 use_pkg_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
@@ -45,7 +46,7 @@ use_pkg_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
     x = tags$style(css),
     value = htmlDependency(
       name = font,
-      version = "0.1.0",
+      version = as.character(packageVersion("gfonts")),
       src = list(href = "gfonts", file = "assets"),
       package = "gfonts",
       stylesheet = sprintf("css/%s.css", font)

@@ -13,8 +13,30 @@ library(gfonts)
 
 
 
+
+
+# Data for included fonts -------------------------------------------------
+
+included_fonts <- gfonts::get_all_fonts()
+included_fonts <- included_fonts[, c("id", "family", "category", "version", "lastModified")]
+included_fonts <- subset(
+  included_fonts,
+  id %in% c("roboto", "open-sans", "lato", "montserrat",
+            "alegreya", "nunito-sans", "baloo", "happy-monkey",
+            "henny-penny")
+)
+rownames(included_fonts) <- seq_len(nrow(included_fonts))
+
+usethis::use_data(included_fonts, overwrite = TRUE)
+
+
+
+
+
 # Roboto ------------------------------------------------------------------
 
+
+# dir.create("inst/assets/fonts/roboto/")
 # font files
 download_font(
   id = "roboto",
@@ -34,6 +56,7 @@ generate_css(
 
 # Open sans ---------------------------------------------------------------
 
+# dir.create("inst/assets/fonts/open-sans/")
 # font files
 download_font(
   id = "open-sans",
@@ -53,6 +76,7 @@ generate_css(
 
 # Lato --------------------------------------------------------------------
 
+# dir.create("inst/assets/fonts/lato/")
 # font files
 download_font(
   id = "lato",
@@ -73,6 +97,7 @@ generate_css(
 
 # Montserrat --------------------------------------------------------------
 
+# dir.create("inst/assets/fonts/montserrat/")
 # font files
 download_font(
   id = "montserrat",
@@ -93,6 +118,7 @@ generate_css(
 
 # Alegreya ----------------------------------------------------------------
 
+# dir.create("inst/assets/fonts/alegreya/")
 # font files
 download_font(
   id = "alegreya",
@@ -114,6 +140,7 @@ generate_css(
 
 # Nunito sans -------------------------------------------------------------
 
+# dir.create("inst/assets/fonts/nunito-sans/")
 # font files
 download_font(
   id = "nunito-sans",
@@ -124,7 +151,7 @@ download_font(
 # css
 generate_css(
   id = "nunito-sans",
-  c("regular", "300italic", "700"),
+  c("regular", "italic", "700"),
   output = "inst/assets/css/nunito-sans.css",
   font_dir = "../fonts/nunito-sans/"
 )
@@ -134,16 +161,17 @@ generate_css(
 
 # Baloo -------------------------------------------------------------------
 
+# dir.create("inst/assets/fonts/baloo/")
 # font files
 download_font(
-  id = "baloo",
+  id = "baloo-2",
   output_dir = "inst/assets/fonts/baloo/",
   variants = "regular"
 )
 
 # css
 generate_css(
-  id = "baloo",
+  id = "baloo-2",
   c("regular"),
   output = "inst/assets/css/baloo.css",
   font_dir = "../fonts/baloo/"
@@ -155,6 +183,7 @@ generate_css(
 
 # Happy monkeys -----------------------------------------------------------
 
+# dir.create("inst/assets/fonts/happy-monkey/")
 # font files
 download_font(
   id = "happy-monkey",
@@ -176,6 +205,7 @@ generate_css(
 
 # Henny Penny -------------------------------------------------------------
 
+# dir.create("inst/assets/fonts/henny-penny/")
 # font files
 download_font(
   id = "henny-penny",
