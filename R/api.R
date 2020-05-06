@@ -30,7 +30,7 @@ get_all_fonts <- function() {
 }
 
 
-#' Get detailed  information about a font
+#' Get detailed information about a font
 #'
 #' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
 #' @param subsets Select charsets, for example \code{"latin"}.

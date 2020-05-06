@@ -25,7 +25,7 @@ generate_css(
 preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
 }
 \value{
-a character string with CSS code (invisibly)
+a character string with CSS code (invisibly).
 }
 \description{
 Generate CSS to import fonts

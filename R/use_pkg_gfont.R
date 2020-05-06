@@ -10,7 +10,7 @@
 #' @param selector CSS selector for which to use the font,
 #'  usually an HTML tag, default to \code{"body"} (all document).
 #'
-#' @return an \code{htmlDependency}.
+#' @return An HTML tag with an \code{\link[htmltools]{htmlDependency}}.
 #' @export
 #'
 #' @importFrom htmltools htmlDependency attachDependencies tags

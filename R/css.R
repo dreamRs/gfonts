@@ -34,7 +34,7 @@ glue_css <- function(font_info, path = "../fonts/") {
 #' @param prefer_local_source Generate CSS font-face rules in which user installed fonts are
 #'     preferred. Use \code{FALSE} if you want to force the use of the downloaded font.
 #'
-#' @return a character string with CSS code (invisibly)
+#' @return a character string with CSS code (invisibly).
 #' @export
 #'
 #' @examples

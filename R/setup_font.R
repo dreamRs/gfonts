@@ -10,8 +10,10 @@
 #' @param prefer_local_source Generate CSS font-face rules in which user installed fonts are
 #'     preferred. Use \code{FALSE} if you want to force the use of the downloaded font.
 #'
-#' @return Two directories will be created (if they do not exist)
-#'  in the \code{output_dir} specified: \strong{fonts} and \strong{css}.
+#' @note Two directories will be created (if they do not exist)
+#'  in the \code{output_dir} specified: \strong{fonts/} and \strong{css/}.
+#'
+#' @return None.
 #' @export
 #'
 #' @importFrom usethis ui_done ui_todo

@@ -19,7 +19,7 @@ use_pkg_gfont(
 usually an HTML tag, default to \code{"body"} (all document).}
 }
 \value{
-an \code{htmlDependency}.
+An HTML tag with an \code{\link[htmltools]{htmlDependency}}.
 }
 \description{
 For convenience, some fonts are included in the package,

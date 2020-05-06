@@ -17,12 +17,15 @@ setup_font(id, output_dir, variants = NULL, prefer_local_source = TRUE)
 preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
 }
 \value{
-Two directories will be created (if they do not exist)
- in the \code{output_dir} specified: \strong{fonts} and \strong{css}.
+None.
 }
 \description{
 This function will download the specified font into a directory of your project
  and generate CSS code to use it in a Shiny application or RMarkdown document.
+}
+\note{
+Two directories will be created (if they do not exist)
+ in the \code{output_dir} specified: \strong{fonts/} and \strong{css/}.
 }
 \examples{
 if (interactive()) {

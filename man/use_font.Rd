@@ -17,7 +17,7 @@ usually an HTML tag, default to \code{"body"} (all document).}
 \item{css}{CSS variables needed to use font, normally this should be automatic.}
 }
 \value{
-an HTML tag with an HTML dependency.
+an HTML tag with an HTML dependency (\code{\link[htmltools]{htmlDependency}}).
 }
 \description{
 Use a downloaded font in Shiny or Markdown
