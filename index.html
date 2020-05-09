@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">gfonts</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.900</span>
       </span>
     </div>
 
@@ -96,30 +96,32 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
+<p>Install from <a href="https://CRAN.R-project.org/package=gfonts">CRAN</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"gfonts"</span>)</pre></div>
 <p>You can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># install.packages("devtools")</span>
 <span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"dreamRs/gfonts"</span>)</pre></div>
 </div>
 <div id="download-a-font-to-use-it-locally" class="section level2">
 <h2 class="hasAnchor">
 <a href="#download-a-font-to-use-it-locally" class="anchor"></a>Download a font to use it locally</h2>
-<p>Get the ID of the desired font between 988 available :</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">gfonts</span>)
+<p>Get the ID of the desired font between 991 available :</p>
+<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">gfonts</span>)
 <span class="fu"><a href="reference/get_all_fonts.html">get_all_fonts</a></span>()</pre></div>
 <p>Download the files necessary for its use and generate the appropriate CSS code :</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="reference/setup_font.html">setup_font</a></span>(
+<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/setup_font.html">setup_font</a></span>(
   <span class="kw">id</span> <span class="kw">=</span> <span class="st">"roboto"</span>,
   <span class="kw">output_dir</span> <span class="kw">=</span> <span class="st">"path/to"</span>
 )</pre></div>
 <p>Use it in {shiny} or {rmarkdown} :</p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/use_font.html">use_font</a></span>(<span class="st">"roboto"</span>, <span class="st">"www/css/roboto.css"</span>)</pre></div>
+<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/use_font.html">use_font</a></span>(<span class="st">"roboto"</span>, <span class="st">"www/css/roboto.css"</span>)</pre></div>
 <p>:point_right: <a href="https://dreamrs.github.io/gfonts/articles/gfonts.html">See detailed example</a></p>
 </div>
 <div id="included-fonts" class="section level2">
 <h2 class="hasAnchor">
 <a href="#included-fonts" class="anchor"></a>Included fonts</h2>
 <p>Some fonts are included in the package and ready to use :</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/use_pkg_gfont.html">use_pkg_gfont</a></span>(<span class="st">"roboto"</span>)</pre></div>
+<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference/use_pkg_gfont.html">use_pkg_gfont</a></span>(<span class="st">"roboto"</span>)</pre></div>
 <p><img src="reference/figures/included-fonts.png"></p>
 <p>:point_right: <a href="https://dreamrs.github.io/gfonts/articles/articles/included-fonts.html">See all fonts available</a></p>
 </div>
@@ -138,6 +140,8 @@
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=gfonts">https://​cloud.r-project.org/​package=gfonts</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/dreamRs/gfonts/">https://​github.com/​dreamRs/​gfonts/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/dreamRs/gfonts/issues">https://​github.com/​dreamRs/​gfonts/​issues</a>
@@ -164,6 +168,7 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
+<li><a href="https://CRAN.R-project.org/package=gfonts"><img src="https://www.r-pkg.org/badges/version/gfonts" alt="CRAN status"></a></li>
 <li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
 <li><a href="https://github.com/dreamRs/gfonts/actions"><img src="https://github.com/dreamRs/gfonts/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://codecov.io/gh/dreamRs/gfonts?branch=master"><img src="https://codecov.io/gh/dreamRs/gfonts/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
