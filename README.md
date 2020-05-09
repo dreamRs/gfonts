@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/gfonts)](https://CRAN.R-project.org/package=gfonts)
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R build
@@ -21,6 +23,12 @@ coverage](https://codecov.io/gh/dreamRs/gfonts/branch/master/graph/badge.svg)](h
 
 ## Installation
 
+Install from [CRAN](https://CRAN.R-project.org/package=gfonts) with:
+
+``` r
+install.packages("gfonts")
+```
+
 You can install the development version from
 [GitHub](https://github.com/) with:
 
@@ -31,7 +39,7 @@ devtools::install_github("dreamRs/gfonts")
 
 ## Download a font to use it locally
 
-Get the ID of the desired font between 988 available :
+Get the ID of the desired font between 991 available :
 
 ``` r
 library(gfonts)

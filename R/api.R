@@ -10,7 +10,11 @@ get_gf <- function(path, query = list(), ...) {
 
 
 
-#' Get infos about all fonts available
+#' @title Get infos about all fonts available
+#'
+#' @description Retrieve from API all fonts currently available.
+#'  Use the \code{id} field in other functions to reference the font you want to use.
+#'
 #'
 #' @return a \code{data.frame}.
 #' @export

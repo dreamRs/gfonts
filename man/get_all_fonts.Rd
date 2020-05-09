@@ -10,7 +10,8 @@ get_all_fonts()
 a \code{data.frame}.
 }
 \description{
-Get infos about all fonts available
+Retrieve from API all fonts currently available.
+ Use the \code{id} field in other functions to reference the font you want to use.
 }
 \examples{
 if (interactive()) {
