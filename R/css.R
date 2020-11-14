@@ -29,6 +29,7 @@ glue_css <- function(font_info, path = "../fonts/") {
 #'
 #' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
 #' @param variants Variant of font to use.
+#' @param subsets Subsets to use.
 #' @param output Specifies path to output file for CSS generated.
 #' @param font_dir Fonts directory relative to \code{ouput}.
 #' @param prefer_local_source Generate CSS font-face rules in which user installed fonts are
@@ -44,9 +45,13 @@ glue_css <- function(font_info, path = "../fonts/") {
 #' cat(generate_css("roboto", "regular"))
 #'
 #' }
-generate_css <- function(id, variants = NULL, output = NULL, font_dir = "../fonts/",
+generate_css <- function(id,
+                         variants = NULL,
+                         subsets = NULL,
+                         output = NULL,
+                         font_dir = "../fonts/",
                          prefer_local_source = TRUE) {
-  font_info <- get_font_info(id = id)
+  font_info <- get_font_info(id = id, subsets = subsets)
   if (!is.null(variants)) {
     id <- font_info$variants$id
     font_info$variants <- font_info$variants[id %in% variants, ]

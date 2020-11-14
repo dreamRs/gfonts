@@ -1,6 +1,6 @@
 Package: gfonts
 Title: Offline 'Google' Fonts for 'Markdown' and 'Shiny'
-Version: 0.1.1.900
+Version: 0.1.1.910
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", role = "aut"),
@@ -21,7 +21,7 @@ Imports:
   jsonlite,
   glue, 
   usethis
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Suggests: 
     knitr,
     rmarkdown,

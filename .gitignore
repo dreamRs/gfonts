@@ -6,3 +6,4 @@
 inst/doc
 examples/markdown/assets/
 examples/markdown/*.html
+dev/

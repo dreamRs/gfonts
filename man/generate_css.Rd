@@ -7,6 +7,7 @@
 generate_css(
   id,
   variants = NULL,
+  subsets = NULL,
   output = NULL,
   font_dir = "../fonts/",
   prefer_local_source = TRUE
@@ -16,6 +17,8 @@ generate_css(
 \item{id}{Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.}
 
 \item{variants}{Variant of font to use.}
+
+\item{subsets}{Subsets to use.}
 
 \item{output}{Specifies path to output file for CSS generated.}
 

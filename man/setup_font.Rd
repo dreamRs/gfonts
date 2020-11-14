@@ -4,7 +4,13 @@
 \alias{setup_font}
 \title{Setup a font to be used in Shiny or Markdown}
 \usage{
-setup_font(id, output_dir, variants = NULL, prefer_local_source = TRUE)
+setup_font(
+  id,
+  output_dir,
+  variants = NULL,
+  subsets = NULL,
+  prefer_local_source = TRUE
+)
 }
 \arguments{
 \item{id}{Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.}
@@ -12,6 +18,8 @@ setup_font(id, output_dir, variants = NULL, prefer_local_source = TRUE)
 \item{output_dir}{Output directory where to save font and CSS files. Must be a directory.}
 
 \item{variants}{Variant(s) to download, default is to includes all available ones.}
+
+\item{subsets}{Subsets to download.}
 
 \item{prefer_local_source}{Generate CSS font-face rules in which user installed fonts are
 preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
