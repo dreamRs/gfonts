@@ -4,12 +4,14 @@
 \alias{get_font_info}
 \title{Get detailed information about a font}
 \usage{
-get_font_info(id, subsets = NULL)
+get_font_info(id, subsets = NULL, ...)
 }
 \arguments{
 \item{id}{Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.}
 
 \item{subsets}{Select charsets, for example \code{"latin"}.}
+
+\item{...}{Arguments passed to \code{crul::HttpClient$new}.}
 }
 \value{
 a \code{data.frame}.

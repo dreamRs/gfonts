@@ -10,6 +10,7 @@
 #' @param subsets Subsets to download.
 #' @param prefer_local_source Generate CSS font-face rules in which user installed fonts are
 #'     preferred. Use \code{FALSE} if you want to force the use of the downloaded font.
+#' @param ... Arguments passed to \code{crul::HttpClient$new}.
 #'
 #' @note Two directories will be created (if they do not exist)
 #'  in the \code{output_dir} specified: \strong{fonts/} and \strong{css/}.
@@ -37,7 +38,12 @@
 #' unlink(path_to_www, recursive = TRUE)
 #'
 #' }
-setup_font <- function(id, output_dir, variants = NULL, subsets = NULL, prefer_local_source = TRUE) {
+setup_font <- function(id,
+                       output_dir,
+                       variants = NULL,
+                       subsets = NULL,
+                       prefer_local_source = TRUE,
+                       ...) {
 
   output_dir <- normalizePath(path = output_dir, mustWork = TRUE)
   dir_info <- file.info(output_dir)
@@ -55,7 +61,8 @@ setup_font <- function(id, output_dir, variants = NULL, subsets = NULL, prefer_l
     id = id,
     output_dir = font_dir,
     variants = variants,
-    subsets = subsets
+    subsets = subsets,
+    http_options = list(...)
   )
   usethis::ui_done("Font downloaded")
 
@@ -65,7 +72,8 @@ setup_font <- function(id, output_dir, variants = NULL, subsets = NULL, prefer_l
     subsets = subsets,
     output = file.path(css_dir, paste0(id, ".css")),
     font_dir = "../fonts/",
-    prefer_local_source = prefer_local_source
+    prefer_local_source = prefer_local_source,
+    ...
   )
   usethis::ui_done("CSS generated")
 

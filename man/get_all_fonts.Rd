@@ -4,7 +4,10 @@
 \alias{get_all_fonts}
 \title{Get infos about all fonts available}
 \usage{
-get_all_fonts()
+get_all_fonts(...)
+}
+\arguments{
+\item{...}{Arguments passed to \code{crul::HttpClient$new}.}
 }
 \value{
 a \code{data.frame}.

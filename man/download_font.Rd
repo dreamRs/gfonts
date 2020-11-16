@@ -4,7 +4,7 @@
 \alias{download_font}
 \title{Download font files}
 \usage{
-download_font(id, output_dir, variants = NULL, ...)
+download_font(id, output_dir, variants = NULL, ..., http_options = list())
 }
 \arguments{
 \item{id}{Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.}
@@ -14,6 +14,8 @@ download_font(id, output_dir, variants = NULL, ...)
 \item{variants}{Variant(s) to download, default is to includes all available ones.}
 
 \item{...}{Additional parameters to API query.}
+
+\item{http_options}{Arguments passed to \code{crul::HttpClient$new}.}
 }
 \value{
 a character vector of the filepaths extracted to, invisibly.

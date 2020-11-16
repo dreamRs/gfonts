@@ -9,7 +9,8 @@ setup_font(
   output_dir,
   variants = NULL,
   subsets = NULL,
-  prefer_local_source = TRUE
+  prefer_local_source = TRUE,
+  ...
 )
 }
 \arguments{
@@ -23,6 +24,8 @@ setup_font(
 
 \item{prefer_local_source}{Generate CSS font-face rules in which user installed fonts are
 preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
+
+\item{...}{Arguments passed to \code{crul::HttpClient$new}.}
 }
 \value{
 None.

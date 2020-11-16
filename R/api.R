@@ -2,7 +2,7 @@
 #' @importFrom crul HttpClient
 get_gf <- function(path, query = list(), ...) {
   url <- getOption("gfonts.url", default = "https://google-webfonts-helper.herokuapp.com")
-  cli <- crul::HttpClient$new(url, opts = list(...))
+  cli <- crul::HttpClient$new(url, ...)
   res <- cli$get(path = path, query = query)
   res$raise_for_status()
   res
@@ -15,6 +15,7 @@ get_gf <- function(path, query = list(), ...) {
 #' @description Retrieve from API all fonts currently available.
 #'  Use the \code{id} field in other functions to reference the font you want to use.
 #'
+#' @param ... Arguments passed to \code{crul::HttpClient$new}.
 #'
 #' @return a \code{data.frame}.
 #' @export
@@ -28,8 +29,8 @@ get_gf <- function(path, query = list(), ...) {
 #'  all_fonts <- get_all_fonts()
 #'
 #' }
-get_all_fonts <- function() {
-  res <- get_gf("/api/fonts/")
+get_all_fonts <- function(...) {
+  res <- get_gf("/api/fonts/", ...)
   jsonlite::fromJSON(res$parse("UTF-8"))
 }
 
@@ -38,6 +39,7 @@ get_all_fonts <- function() {
 #'
 #' @param id Id of the font, correspond to column \code{id} from \code{\link{get_all_fonts}}.
 #' @param subsets Select charsets, for example \code{"latin"}.
+#' @param ... Arguments passed to \code{crul::HttpClient$new}.
 #'
 #' @return a \code{data.frame}.
 #' @export
@@ -51,10 +53,10 @@ get_all_fonts <- function() {
 #'  roboto <- get_font_info("roboto")
 #'
 #' }
-get_font_info <- function(id, subsets = NULL) {
+get_font_info <- function(id, subsets = NULL, ...) {
   if (!is.null(subsets))
     subsets <- paste(subsets, collapse = ",")
-  res <- get_gf(paste0("/api/fonts/", id), query = dropNulls(list(subsets = subsets)))
+  res <- get_gf(paste0("/api/fonts/", id), query = dropNulls(list(subsets = subsets)), ...)
   jsonlite::fromJSON(res$parse("UTF-8"))
 }
 
@@ -66,6 +68,7 @@ get_font_info <- function(id, subsets = NULL) {
 #' @param output_dir Output directory where to save font files.
 #' @param variants Variant(s) to download, default is to includes all available ones.
 #' @param ... Additional parameters to API query.
+#' @param http_options Arguments passed to \code{crul::HttpClient$new}.
 #'
 #' @return a character vector of the filepaths extracted to, invisibly.
 #' @export
@@ -96,7 +99,7 @@ get_font_info <- function(id, subsets = NULL) {
 #' unlink(path_to_dir, recursive = TRUE)
 #'
 #' }
-download_font <- function(id, output_dir, variants = NULL, ...) {
+download_font <- function(id, output_dir, variants = NULL, ..., http_options = list()) {
   if (length(variants) > 1)
     variants <- paste(variants, collapse = ",")
   output_dir <- normalizePath(output_dir, mustWork = TRUE)
@@ -105,7 +108,11 @@ download_font <- function(id, output_dir, variants = NULL, ...) {
   }
   output_dir <- gsub(pattern = "\\\\$", replacement = "", x = output_dir)
   path <- paste0("/api/fonts/", id)
-  res <- get_gf(path, dropNulls(list(download = "zip", variants = variants, ...)))
+  get_gf_args <- c(
+    list(path = path, query = dropNulls(list(download = "zip", variants = variants, ...))),
+    http_options
+  )
+  res <- do.call(get_gf, get_gf_args)
   tmp <- tempfile(fileext = ".zip")
   on.exit(unlink(tmp))
   writeBin(object = res$content, con = tmp)
