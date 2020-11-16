@@ -31,18 +31,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">gfonts</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.920</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/gfonts.html">Get started</a>
 </li>
@@ -82,7 +76,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="gfonts_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>gfonts</h1>
@@ -95,17 +89,19 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">gfonts</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dreamRs/gfonts">gfonts</a></span><span class="op">)</span></code></pre></div>
 <p>{gfonts} allow you to use a <a href="https://fonts.google.com/">Google font</a> to use it offline in a Shiny application or a R Markdown document. You can download a font via <a href="https://google-webfonts-helper.herokuapp.com/fonts">google-webfonts-helper</a> and generate appropriate CSS to use it.</p>
 <div id="setup-a-font-to-use-in-your-project" class="section level2">
 <h2 class="hasAnchor">
 <a href="#setup-a-font-to-use-in-your-project" class="anchor"></a>Setup a font to use in your project</h2>
 <p>In your project directory, use <code>setup_font</code> once to download a font and generate CSS code. For example to use the <a href="https://fonts.google.com/specimen/Roboto">Roboto font</a>, you can do :</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/setup_font.html">setup_font</a></span>(
-  <span class="kw">id</span> <span class="kw">=</span> <span class="st">"roboto"</span>,
-  <span class="kw">output_dir</span> <span class="kw">=</span> <span class="st">"www"</span>,
-  <span class="kw">variants</span> <span class="kw">=</span> <span class="st">"regular"</span>
-)</pre></body></html></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/setup_font.html">setup_font</a></span><span class="op">(</span>
+  id <span class="op">=</span> <span class="st">"roboto"</span>,
+  output_dir <span class="op">=</span> <span class="st">"www"</span>,
+  variants <span class="op">=</span> <span class="st">"regular"</span>
+<span class="op">)</span></code></pre></div>
 <p>In a Shiny application you can use <code>www/</code> folder, for R Markdown, create a sub-folder at the same level as your <code>.Rmd</code> file.</p>
 <p><code><a href="../reference/setup_font.html">setup_font()</a></code> will create two sub-folders, containing the following files :</p>
 <pre><code>www
@@ -118,49 +114,52 @@
     +-- roboto-v20-latin-regular.woff
     \-- roboto-v20-latin-regular.woff2</code></pre>
 <p>To know all fonts and their ids, you can use <code><a href="../reference/get_all_fonts.html">get_all_fonts()</a></code> :</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="fu"><a href="../reference/get_all_fonts.html">get_all_fonts</a></span>())
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_all_fonts.html">get_all_fonts</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt;                id          family</span>
 <span class="co">#&gt; 1          roboto          Roboto</span>
 <span class="co">#&gt; 2       open-sans       Open Sans</span>
-<span class="co">#&gt; 3            lato            Lato</span>
-<span class="co">#&gt; 4    noto-sans-jp    Noto Sans JP</span>
+<span class="co">#&gt; 3    noto-sans-jp    Noto Sans JP</span>
+<span class="co">#&gt; 4            lato            Lato</span>
 <span class="co">#&gt; 5      montserrat      Montserrat</span>
 <span class="co">#&gt; 6 source-sans-pro Source Sans Pro</span>
 <span class="co">#&gt;                                                                                                                                          variants</span>
 <span class="co">#&gt; 1                                                 100, 100italic, 300, 300italic, regular, italic, 500, 500italic, 700, 700italic, 900, 900italic</span>
 <span class="co">#&gt; 2                                                                 300, 300italic, regular, italic, 600, 600italic, 700, 700italic, 800, 800italic</span>
-<span class="co">#&gt; 3                                                                 100, 100italic, 300, 300italic, regular, italic, 700, 700italic, 900, 900italic</span>
-<span class="co">#&gt; 4                                                                                                                100, 300, regular, 500, 700, 900</span>
+<span class="co">#&gt; 3                                                                                                                100, 300, regular, 500, 700, 900</span>
+<span class="co">#&gt; 4                                                                 100, 100italic, 300, 300italic, regular, italic, 700, 700italic, 900, 900italic</span>
 <span class="co">#&gt; 5 100, 100italic, 200, 200italic, 300, 300italic, regular, italic, 500, 500italic, 600, 600italic, 700, 700italic, 800, 800italic, 900, 900italic</span>
 <span class="co">#&gt; 6                                                 200, 200italic, 300, 300italic, regular, italic, 600, 600italic, 700, 700italic, 900, 900italic</span>
 <span class="co">#&gt;                                                                  subsets</span>
 <span class="co">#&gt; 1 cyrillic, cyrillic-ext, greek, greek-ext, latin, latin-ext, vietnamese</span>
 <span class="co">#&gt; 2 cyrillic, cyrillic-ext, greek, greek-ext, latin, latin-ext, vietnamese</span>
-<span class="co">#&gt; 3                                                       latin, latin-ext</span>
-<span class="co">#&gt; 4                                                        japanese, latin</span>
+<span class="co">#&gt; 3                                                        japanese, latin</span>
+<span class="co">#&gt; 4                                                       latin, latin-ext</span>
 <span class="co">#&gt; 5                   cyrillic, cyrillic-ext, latin, latin-ext, vietnamese</span>
 <span class="co">#&gt; 6 cyrillic, cyrillic-ext, greek, greek-ext, latin, latin-ext, vietnamese</span>
 <span class="co">#&gt;     category version lastModified popularity defSubset defVariant</span>
 <span class="co">#&gt; 1 sans-serif     v20   2019-07-24          1     latin    regular</span>
-<span class="co">#&gt; 2 sans-serif     v17   2019-07-23          2     latin    regular</span>
-<span class="co">#&gt; 3 sans-serif     v16   2019-07-23          3     latin    regular</span>
-<span class="co">#&gt; 4 sans-serif     v25   2020-03-05          4     latin    regular</span>
-<span class="co">#&gt; 5 sans-serif     v14   2019-07-23          5     latin    regular</span>
-<span class="co">#&gt; 6 sans-serif     v13   2019-07-23          6     latin    regular</span></pre></body></html></div>
+<span class="co">#&gt; 2 sans-serif     v18   2020-09-15          2     latin    regular</span>
+<span class="co">#&gt; 3 sans-serif     v28   2020-11-12          3     latin    regular</span>
+<span class="co">#&gt; 4 sans-serif     v17   2020-09-15          4     latin    regular</span>
+<span class="co">#&gt; 5 sans-serif     v15   2020-09-15          5     latin    regular</span>
+<span class="co">#&gt; 6 sans-serif     v14   2020-09-15          6     latin    regular</span></code></pre></div>
 </div>
 <div id="use-a-font" class="section level2">
 <h2 class="hasAnchor">
 <a href="#use-a-font" class="anchor"></a>Use a font</h2>
 <p>To use a downloaded font, you can use in your UI or in a chunk :</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="../reference/use_font.html">use_font</a></span>(<span class="st">"roboto"</span>, <span class="st">"www/css/roboto.css"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/use_font.html">use_font</a></span><span class="op">(</span><span class="st">"roboto"</span>, <span class="st">"www/css/roboto.css"</span><span class="op">)</span></code></pre></div>
 <p>First argument is the id of font downloaded, second is path to CSS file generated.</p>
 <p>An other solution in Shiny application is to import the CSS file in a link tag and add a style tag:</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu">fluidPage</span>(
-
-  <span class="no">tags</span>$<span class="fu">link</span>(<span class="kw">rel</span> <span class="kw">=</span> <span class="st">"stylesheet"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"text/css"</span>, <span class="kw">href</span> <span class="kw">=</span> <span class="st">"css/roboto.css"</span>),
-  <span class="no">tags</span>$<span class="fu">style</span>(<span class="st">"body {font-family: 'Roboto', sans-serif;}"</span>)
-
-)</pre></body></html></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://shiny.rstudio.com/reference/shiny/latest/fluidPage.html">fluidPage</a></span><span class="op">(</span>
+  
+  <span class="va">tags</span><span class="op">$</span><span class="fu">link</span><span class="op">(</span>rel <span class="op">=</span> <span class="st">"stylesheet"</span>, type <span class="op">=</span> <span class="st">"text/css"</span>, href <span class="op">=</span> <span class="st">"css/roboto.css"</span><span class="op">)</span>,
+  <span class="va">tags</span><span class="op">$</span><span class="fu">style</span><span class="op">(</span><span class="st">"body {font-family: 'Roboto', sans-serif;}"</span><span class="op">)</span>
+  
+<span class="op">)</span></code></pre></div>
 <p>In Markdown, import CSS file in yaml header, and add a CSS chunk :</p>
 <pre><code>---
 output: 
@@ -178,17 +177,19 @@ body {font-family: 'Roboto', sans-serif;}
 <h2 class="hasAnchor">
 <a href="#download-a-font" class="anchor"></a>Download a font</h2>
 <p>If you only want to download a font, you can use:</p>
-<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="fu"><a href="../reference/download_font.html">download_font</a></span>(
-  <span class="kw">id</span> <span class="kw">=</span> <span class="st">"roboto"</span>,
-  <span class="kw">output_dir</span> <span class="kw">=</span> <span class="st">"azerty"</span>,
-  <span class="kw">variants</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"regular"</span>, <span class="st">"300italic"</span>, <span class="st">"700"</span>)
-)</pre></body></html></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/download_font.html">download_font</a></span><span class="op">(</span>
+  id <span class="op">=</span> <span class="st">"roboto"</span>,
+  output_dir <span class="op">=</span> <span class="st">"azerty"</span>,
+  variants <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"regular"</span>, <span class="st">"300italic"</span>, <span class="st">"700"</span><span class="op">)</span>
+<span class="op">)</span></code></pre></div>
 </div>
 <div id="generate-css" class="section level2">
 <h2 class="hasAnchor">
 <a href="#generate-css" class="anchor"></a>Generate CSS</h2>
 <p>To download CSS code to import a font in HTML, you can use:</p>
-<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="../reference/generate_css.html">generate_css</a></span>(<span class="st">"roboto"</span>, <span class="st">"regular"</span>, <span class="kw">font_dir</span> <span class="kw">=</span> <span class="st">"path/to/font"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/generate_css.html">generate_css</a></span><span class="op">(</span><span class="st">"roboto"</span>, <span class="st">"regular"</span>, font_dir <span class="op">=</span> <span class="st">"path/to/font"</span><span class="op">)</span></code></pre></div>
 <pre><code>#&gt; @font-face {
 #&gt;   font-family: 'Roboto';
 #&gt;   font-style: normal;
@@ -220,7 +221,7 @@ body {font-family: 'Roboto', sans-serif;}
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
