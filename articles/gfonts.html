@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">gfonts</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.920</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -62,7 +62,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/dreamRs/gfonts/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -116,20 +116,20 @@
 <p>To know all fonts and their ids, you can use <code><a href="../reference/get_all_fonts.html">get_all_fonts()</a></code> :</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_all_fonts.html">get_all_fonts</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-<span class="co">#&gt;                id          family</span>
-<span class="co">#&gt; 1          roboto          Roboto</span>
-<span class="co">#&gt; 2       open-sans       Open Sans</span>
-<span class="co">#&gt; 3    noto-sans-jp    Noto Sans JP</span>
-<span class="co">#&gt; 4            lato            Lato</span>
-<span class="co">#&gt; 5      montserrat      Montserrat</span>
-<span class="co">#&gt; 6 source-sans-pro Source Sans Pro</span>
+<span class="co">#&gt;                 id           family</span>
+<span class="co">#&gt; 1           roboto           Roboto</span>
+<span class="co">#&gt; 2        open-sans        Open Sans</span>
+<span class="co">#&gt; 3     noto-sans-jp     Noto Sans JP</span>
+<span class="co">#&gt; 4             lato             Lato</span>
+<span class="co">#&gt; 5       montserrat       Montserrat</span>
+<span class="co">#&gt; 6 roboto-condensed Roboto Condensed</span>
 <span class="co">#&gt;                                                                                                                                          variants</span>
 <span class="co">#&gt; 1                                                 100, 100italic, 300, 300italic, regular, italic, 500, 500italic, 700, 700italic, 900, 900italic</span>
 <span class="co">#&gt; 2                                                                 300, 300italic, regular, italic, 600, 600italic, 700, 700italic, 800, 800italic</span>
 <span class="co">#&gt; 3                                                                                                                100, 300, regular, 500, 700, 900</span>
 <span class="co">#&gt; 4                                                                 100, 100italic, 300, 300italic, regular, italic, 700, 700italic, 900, 900italic</span>
 <span class="co">#&gt; 5 100, 100italic, 200, 200italic, 300, 300italic, regular, italic, 500, 500italic, 600, 600italic, 700, 700italic, 800, 800italic, 900, 900italic</span>
-<span class="co">#&gt; 6                                                 200, 200italic, 300, 300italic, regular, italic, 600, 600italic, 700, 700italic, 900, 900italic</span>
+<span class="co">#&gt; 6                                                                                                 300, 300italic, regular, italic, 700, 700italic</span>
 <span class="co">#&gt;                                                                  subsets</span>
 <span class="co">#&gt; 1 cyrillic, cyrillic-ext, greek, greek-ext, latin, latin-ext, vietnamese</span>
 <span class="co">#&gt; 2 cyrillic, cyrillic-ext, greek, greek-ext, latin, latin-ext, vietnamese</span>
@@ -143,7 +143,7 @@
 <span class="co">#&gt; 3 sans-serif     v28   2020-11-12          3     latin    regular</span>
 <span class="co">#&gt; 4 sans-serif     v17   2020-09-15          4     latin    regular</span>
 <span class="co">#&gt; 5 sans-serif     v15   2020-09-15          5     latin    regular</span>
-<span class="co">#&gt; 6 sans-serif     v14   2020-09-15          6     latin    regular</span></code></pre></div>
+<span class="co">#&gt; 6 sans-serif     v19   2020-09-15          6     latin    regular</span></code></pre></div>
 </div>
 <div id="use-a-font" class="section level2">
 <h2 class="hasAnchor">
@@ -195,7 +195,7 @@ body {font-family: 'Roboto', sans-serif;}
 #&gt;   font-style: normal;
 #&gt;   font-weight: 400;
 #&gt;   src: url('path/to/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
-#&gt;   src: local('Roboto'), local('Roboto-Regular'),
+#&gt;   src: local(''), local(''),
 #&gt;        url('path/to/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
 #&gt;        url('path/to/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
 #&gt;        url('path/to/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
