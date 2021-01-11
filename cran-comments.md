@@ -6,8 +6,6 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 note
 
-* This is a new release. 
-This package allow to download Google Fonts to include in web projects without depending on Google's service.
-Most example are wrap in `interactive()` because of API calls, but all are runnable. All function are tested, have examples and return value.
+* New functionnalities to suport fonts with other charsets than Latin (e.g. Chinese for example)
