@@ -39,7 +39,7 @@ devtools::install_github("dreamRs/gfonts")
 
 ## Download a font to use it locally
 
-Get the ID of the desired font between 991 available :
+Get the ID of the desired font between **1029** available :
 
 ``` r
 library(gfonts)
