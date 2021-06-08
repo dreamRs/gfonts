@@ -13,7 +13,7 @@ To download a font in your project, use outside of your Rmd document :
 
 ```{r demo-setup_font, eval=FALSE}
 setup_font(
-  id = "indie-flower",
+  id = "kiwi-maru",
   output_dir = "assets"
 )
 ```
@@ -31,7 +31,7 @@ gfonts::use_font("indie-flower", "assets/css/indie-flower.css")
 
 
 ```{r ex-use_font-bis, echo=FALSE, results='asis'}
-gfonts::use_font("indie-flower", "assets/css/indie-flower.css")
+gfonts::use_font("kiwi-maru", "assets/css/kiwi-maru.css", css = "font-family: 'Kiwi Maru', serif;")
 ```
 
 

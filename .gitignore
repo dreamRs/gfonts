@@ -6,4 +6,5 @@
 inst/doc
 examples/markdown/assets/
 examples/markdown/*.html
+examples/shiny/www/
 dev/
