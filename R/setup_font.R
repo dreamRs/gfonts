@@ -18,7 +18,8 @@
 #' @return None.
 #' @export
 #'
-#' @importFrom usethis ui_done ui_todo
+#' @importFrom crayon bold green red
+#' @importFrom glue glue
 #'
 #' @examples
 #' if (interactive()) {
@@ -64,7 +65,7 @@ setup_font <- function(id,
     subsets = subsets,
     http_options = list(...)
   )
-  usethis::ui_done("Font downloaded")
+  cat(crayon::bold(crayon::green("\u2713")), "Font files downloaded!\n")
 
   generate_css(
     id = id,
@@ -75,12 +76,14 @@ setup_font <- function(id,
     prefer_local_source = prefer_local_source,
     ...
   )
-  usethis::ui_done("CSS generated")
+  cat(crayon::bold(crayon::green("\u2713")), "CSS file generated!\n")
 
   path_to_css <- file.path(basename(output_dir), "css", paste0(id, ".css"))
-  usethis::ui_todo(
-    "Please use `use_font(\"{id}\", \"{path_to_css}\")` to import the font in Shiny or Markdown."
+  cat(
+    crayon::red("\u2732"),
+    glue::glue("Please use `use_font(\"{id}\", \"{path_to_css}\")` to import the font in Shiny or Markdown.")
   )
+  invisible(path_to_css)
 }
 
 
