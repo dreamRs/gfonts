@@ -59,9 +59,15 @@
 
 
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">gfonts</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2.9000</span>
       </span>
     </div>
 
@@ -133,14 +139,14 @@
  and generate CSS code to use it in a Shiny application or RMarkdown document.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>setup_font</span><span class='op'>(</span>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>setup_font</span><span class='op'>(</span>
   <span class='va'>id</span>,
   <span class='va'>output_dir</span>,
   variants <span class='op'>=</span> <span class='cn'>NULL</span>,
   subsets <span class='op'>=</span> <span class='cn'>NULL</span>,
   prefer_local_source <span class='op'>=</span> <span class='cn'>TRUE</span>,
   <span class='va'>...</span>
-<span class='op'>)</span></pre>
+<span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -181,24 +187,24 @@ preferred. Use <code>FALSE</code> if you want to force the use of the downloaded
  in the <code>output_dir</code> specified: <strong>fonts/</strong> and <strong>css/</strong>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
-
-<span class='co'># For example, we use a temporary directory</span>
-<span class='va'>path_to_www</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/files2.html'>dir.create</a></span><span class='op'>(</span><span class='va'>path_to_www</span><span class='op'>)</span>
-
-<span class='co'># In a Shiny app, you can use the www/ directory</span>
-<span class='co'># in Markdown, use a subfolder of your Rmd directory</span>
-<span class='fu'>setup_font</span><span class='op'>(</span>
-  id <span class='op'>=</span> <span class='st'>"open-sans-condensed"</span>,
-  output_dir <span class='op'>=</span> <span class='va'>path_to_www</span>
-<span class='op'>)</span>
-
-<span class='co'># Clean up</span>
-<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span><span class='op'>(</span><span class='va'>path_to_www</span>, recursive <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-
-<span class='op'>}</span>
-</div></pre>
+    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># For example, we use a temporary directory</span></span>
+<span class='r-in'><span class='va'>path_to_www</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/base/files2.html'>dir.create</a></span><span class='op'>(</span><span class='va'>path_to_www</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># In a Shiny app, you can use the www/ directory</span></span>
+<span class='r-in'><span class='co'># in Markdown, use a subfolder of your Rmd directory</span></span>
+<span class='r-in'><span class='fu'>setup_font</span><span class='op'>(</span></span>
+<span class='r-in'>  id <span class='op'>=</span> <span class='st'>"open-sans-condensed"</span>,</span>
+<span class='r-in'>  output_dir <span class='op'>=</span> <span class='va'>path_to_www</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Clean up</span></span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span><span class='op'>(</span><span class='va'>path_to_www</span>, recursive <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='op'>}</span></span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -210,11 +216,11 @@ preferred. Use <code>FALSE</code> if you want to force the use of the downloaded
 
       <footer>
       <div class="copyright">
-  <p>Developed by <a href='https://twitter.com/_pvictorr'><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"/> Victor Perrier</a>, <a href='https://twitter.com/_mfaan'><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg" /> Fanny Meyer</a>.</p>
+  <p><p>Developed by <a href="https://twitter.com/_pvictorr" class="external-link"><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"> Victor Perrier</a>, <a href="https://twitter.com/_mfaan" class="external-link"><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg"> Fanny Meyer</a>.</p></p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
@@ -222,6 +228,8 @@ preferred. Use <code>FALSE</code> if you want to force the use of the downloaded
 
   
 
+
+  
 
   </body>
 </html>

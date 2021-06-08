@@ -59,9 +59,15 @@
 
 
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">gfonts</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2.9000</span>
       </span>
     </div>
 
@@ -133,11 +139,11 @@
  you can use them without having to download them, but only few variants are available.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>use_pkg_gfont</span><span class='op'>(</span>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>use_pkg_gfont</span><span class='op'>(</span>
   font <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"roboto"</span>, <span class='st'>"open-sans"</span>, <span class='st'>"lato"</span>, <span class='st'>"montserrat"</span>, <span class='st'>"alegreya"</span>, <span class='st'>"nunito-sans"</span>,
     <span class='st'>"baloo"</span>, <span class='st'>"happy-monkey"</span>, <span class='st'>"henny-penny"</span><span class='op'>)</span>,
   selector <span class='op'>=</span> <span class='st'>"body"</span>
-<span class='op'>)</span></pre>
+<span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -160,36 +166,36 @@ usually an HTML tag, default to <code>"body"</code> (all document).</p></td>
     <p>An HTML tag with an <code><a href='https://rdrr.io/pkg/htmltools/man/htmlDependency.html'>htmlDependency</a></code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
-
-  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/dreamRs/gfonts'>gfonts</a></span><span class='op'>)</span>
-  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/htmltools'>htmltools</a></span><span class='op'>)</span>
-
-  <span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/browsable.html'>browsable</a></span><span class='op'>(</span><span class='va'>tags</span><span class='op'>$</span><span class='fu'>div</span><span class='op'>(</span>
-    <span class='fu'>use_pkg_gfont</span><span class='op'>(</span><span class='st'>"open-sans"</span><span class='op'>)</span>,
-    <span class='fu'><a href='tag_example.html'>tag_example</a></span><span class='op'>(</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h1</span><span class='op'>(</span><span class='st'>"First level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h2</span><span class='op'>(</span><span class='st'>"Second level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h3</span><span class='op'>(</span><span class='st'>"Third level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h4</span><span class='op'>(</span><span class='st'>"Fourth level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h5</span><span class='op'>(</span><span class='st'>"Fifth level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h6</span><span class='op'>(</span><span class='st'>"Sixth level title"</span><span class='op'>)</span>
-  <span class='op'>)</span><span class='op'>)</span>
-
-
-  <span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/browsable.html'>browsable</a></span><span class='op'>(</span><span class='va'>tags</span><span class='op'>$</span><span class='fu'>div</span><span class='op'>(</span>
-    <span class='fu'>use_pkg_gfont</span><span class='op'>(</span><span class='st'>"henny-penny"</span><span class='op'>)</span>,
-    <span class='fu'><a href='tag_example.html'>tag_example</a></span><span class='op'>(</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h1</span><span class='op'>(</span><span class='st'>"First level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h2</span><span class='op'>(</span><span class='st'>"Second level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h3</span><span class='op'>(</span><span class='st'>"Third level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h4</span><span class='op'>(</span><span class='st'>"Fourth level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h5</span><span class='op'>(</span><span class='st'>"Fifth level title"</span><span class='op'>)</span>,
-    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h6</span><span class='op'>(</span><span class='st'>"Sixth level title"</span><span class='op'>)</span>
-  <span class='op'>)</span><span class='op'>)</span>
-
-<span class='op'>}</span>
-</div></pre>
+    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'></span>
+<span class='r-in'>  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/dreamRs/gfonts'>gfonts</a></span><span class='op'>)</span></span>
+<span class='r-in'>  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/htmltools'>htmltools</a></span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'>  <span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/browsable.html'>browsable</a></span><span class='op'>(</span><span class='va'>tags</span><span class='op'>$</span><span class='fu'>div</span><span class='op'>(</span></span>
+<span class='r-in'>    <span class='fu'>use_pkg_gfont</span><span class='op'>(</span><span class='st'>"open-sans"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='fu'><a href='tag_example.html'>tag_example</a></span><span class='op'>(</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h1</span><span class='op'>(</span><span class='st'>"First level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h2</span><span class='op'>(</span><span class='st'>"Second level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h3</span><span class='op'>(</span><span class='st'>"Third level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h4</span><span class='op'>(</span><span class='st'>"Fourth level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h5</span><span class='op'>(</span><span class='st'>"Fifth level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h6</span><span class='op'>(</span><span class='st'>"Sixth level title"</span><span class='op'>)</span></span>
+<span class='r-in'>  <span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'></span>
+<span class='r-in'>  <span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/browsable.html'>browsable</a></span><span class='op'>(</span><span class='va'>tags</span><span class='op'>$</span><span class='fu'>div</span><span class='op'>(</span></span>
+<span class='r-in'>    <span class='fu'>use_pkg_gfont</span><span class='op'>(</span><span class='st'>"henny-penny"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='fu'><a href='tag_example.html'>tag_example</a></span><span class='op'>(</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h1</span><span class='op'>(</span><span class='st'>"First level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h2</span><span class='op'>(</span><span class='st'>"Second level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h3</span><span class='op'>(</span><span class='st'>"Third level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h4</span><span class='op'>(</span><span class='st'>"Fourth level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h5</span><span class='op'>(</span><span class='st'>"Fifth level title"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    <span class='va'>tags</span><span class='op'>$</span><span class='fu'>h6</span><span class='op'>(</span><span class='st'>"Sixth level title"</span><span class='op'>)</span></span>
+<span class='r-in'>  <span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='op'>}</span></span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -201,11 +207,11 @@ usually an HTML tag, default to <code>"body"</code> (all document).</p></td>
 
       <footer>
       <div class="copyright">
-  <p>Developed by <a href='https://twitter.com/_pvictorr'><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"/> Victor Perrier</a>, <a href='https://twitter.com/_mfaan'><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg" /> Fanny Meyer</a>.</p>
+  <p><p>Developed by <a href="https://twitter.com/_pvictorr" class="external-link"><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"> Victor Perrier</a>, <a href="https://twitter.com/_mfaan" class="external-link"><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg"> Fanny Meyer</a>.</p></p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
@@ -213,6 +219,8 @@ usually an HTML tag, default to <code>"body"</code> (all document).</p></td>
 
   
 
+
+  
 
   </body>
 </html>
