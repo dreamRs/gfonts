@@ -32,18 +32,20 @@ test_that("get_font_info works", {
 test_that("download_font works", {
   # vcr::use_cassette("download_font", {
   testthat::skip_if_offline()
-    tmp <- tempfile()
-    dir.create(tmp)
+  testthat::skip_if_not(is_service_ok())
 
-    download_font(
-      id = "roboto",
-      output_dir = tmp,
-      variants = "regular"
-    )
+  tmp <- tempfile()
+  dir.create(tmp)
 
-    expect_true(length(list.files(tmp)) > 1)
+  download_font(
+    id = "roboto",
+    output_dir = tmp,
+    variants = "regular"
+  )
 
-    unlink(x = tmp, recursive = TRUE)
+  expect_true(length(list.files(tmp)) > 1)
+
+  unlink(x = tmp, recursive = TRUE)
   # })
 })
 

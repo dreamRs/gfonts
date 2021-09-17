@@ -9,6 +9,14 @@ get_gf <- function(path, query = list(), ...) {
 }
 
 
+#' @importFrom crul HttpClient
+is_service_ok <- function() {
+  url <- getOption("gfonts.url", default = "https://google-webfonts-helper.herokuapp.com")
+  res <- crul::HttpClient$new(url)$get()
+  res$status_code < 300
+}
+
+
 
 #' @title Get infos about all fonts available
 #'

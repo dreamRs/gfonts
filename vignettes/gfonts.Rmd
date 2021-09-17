@@ -53,7 +53,7 @@ www
 
 To know all fonts and their ids, you can use `get_all_fonts()` :
 
-```{r, eval=TRUE}
+```{r, eval=gfonts:::is_service_ok()}
 head(get_all_fonts())
 ```
 
@@ -120,7 +120,7 @@ To download CSS code to import a font in HTML, you can use:
 generate_css("roboto", "regular", font_dir = "path/to/font")
 ```
 
-```{r, eval=TRUE, echo=FALSE}
+```{r, eval=gfonts:::is_service_ok(), echo=FALSE}
 cat(generate_css("roboto", "regular", font_dir = "path/to/"))
 ```
 
