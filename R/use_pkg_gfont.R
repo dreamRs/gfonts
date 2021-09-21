@@ -20,7 +20,7 @@
 #' @example examples/ex-use_pkg_gfont.R
 use_pkg_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
                                    "alegreya", "nunito-sans", "baloo", "happy-monkey",
-                                   "henny-penny", "poppins"),
+                                   "henny-penny", "poppins", "oswald"),
                           selector = "body") {
 
   font <- match.arg(arg = font)
@@ -38,7 +38,8 @@ use_pkg_gfont <- function(font = c("roboto", "open-sans", "lato", "montserrat",
     "baloo" = "font-family: 'Baloo', cursive;",
     "happy-monkey" = "font-family: 'Happy Monkey', cursive;",
     "henny-penny" = "font-family: 'Henny Penny', cursive;",
-    "poppins" = "font-family: 'Poppins', sans-serif;"
+    "poppins" = "font-family: 'Poppins', sans-serif;",
+    "oswald" = "font-family: 'Oswald', sans-serif;"
   )
   css <- glue::glue("{selector} {{{css}}}", selector = selector, css = css)
   css <- paste(css, collapse = "\n")

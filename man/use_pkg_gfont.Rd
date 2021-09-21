@@ -6,7 +6,7 @@
 \usage{
 use_pkg_gfont(
   font = c("roboto", "open-sans", "lato", "montserrat", "alegreya", "nunito-sans",
-    "baloo", "happy-monkey", "henny-penny", "poppins"),
+    "baloo", "happy-monkey", "henny-penny", "poppins", "oswald"),
   selector = "body"
 )
 }
