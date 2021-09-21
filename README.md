@@ -7,8 +7,6 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/gfonts)](https://CRAN.R-project.org/package=gfonts)
-[![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R build
 status](https://github.com/dreamRs/gfonts/workflows/R-CMD-check/badge.svg)](https://github.com/dreamRs/gfonts/actions)
 [![Codecov test
@@ -30,16 +28,16 @@ install.packages("gfonts")
 ```
 
 You can install the development version from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/dreamRs/gfonts) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("dreamRs/gfonts")
+# install.packages("remotes")
+remotes::install_github("dreamRs/gfonts")
 ```
 
 ## Download a font to use it locally
 
-Get the ID of the desired font between **1029** available :
+Get the ID of the desired font between **1284** available :
 
 ``` r
 library(gfonts)
@@ -80,9 +78,9 @@ available](https://dreamrs.github.io/gfonts/articles/articles/included-fonts.htm
 
 ## Related packages
 
-  - Package
+-   Package
     [`googlefontR`](https://github.com/timelyportfolio/googlefontR)
     provides helper functions to ease the use of Google Fonts with R.
-  - Package [`showtext`](https://github.com/yixuan/showtext) makes it
+-   Package [`showtext`](https://github.com/yixuan/showtext) makes it
     easy to use various types of fonts (TrueType, OpenType, Type 1, web
     fonts, etc.) in R graphs.
