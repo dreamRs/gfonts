@@ -11,6 +11,7 @@ generate_css(
   output = NULL,
   font_dir = "../fonts/",
   prefer_local_source = TRUE,
+  browser_support = c("best", "modern"),
   ...
 )
 }
@@ -27,6 +28,9 @@ generate_css(
 
 \item{prefer_local_source}{Generate CSS font-face rules in which user installed fonts are
 preferred. Use \code{FALSE} if you want to force the use of the downloaded font.}
+
+\item{browser_support}{Browser to support, choose \code{"best"} to support
+old browser or \code{"modern"} for only recent ones.}
 
 \item{...}{Arguments passed to \code{crul::HttpClient$new}.}
 }

@@ -1,7 +1,13 @@
 
 #' @importFrom glue glue
-glue_css <- function(font_info, path = "../fonts/") {
-  template <- readLines(system.file("assets/templates/css_best.txt", package = "gfonts"))
+glue_css <- function(font_info, path = "../fonts/", browser_support = c("best", "modern")) {
+  browser_support <- match.arg(browser_support)
+  template <- if (identical(browser_support, "best")) {
+    system.file("assets/templates/css_best.txt", package = "gfonts")
+  } else {
+    system.file("assets/templates/css_modern.txt", package = "gfonts")
+  }
+  template <- readLines(template)
   template <- paste(template, collapse = "\n")
   res <- lapply(
     X = seq_len(nrow(font_info$variants)),
@@ -34,6 +40,8 @@ glue_css <- function(font_info, path = "../fonts/") {
 #' @param font_dir Fonts directory relative to \code{ouput}.
 #' @param prefer_local_source Generate CSS font-face rules in which user installed fonts are
 #'     preferred. Use \code{FALSE} if you want to force the use of the downloaded font.
+#' @param browser_support Browser to support, choose \code{"best"} to support
+#'     old browser or \code{"modern"} for only recent ones.
 #' @param ... Arguments passed to \code{crul::HttpClient$new}.
 #'
 #' @return a character string with CSS code (invisibly).
@@ -52,13 +60,18 @@ generate_css <- function(id,
                          output = NULL,
                          font_dir = "../fonts/",
                          prefer_local_source = TRUE,
+                         browser_support = c("best", "modern"),
                          ...) {
   font_info <- get_font_info(id = id, subsets = subsets, ...)
   if (!is.null(variants)) {
     id <- font_info$variants$id
     font_info$variants <- font_info$variants[id %in% variants, ]
   }
-  css <- glue_css(font_info = font_info, path = font_dir)
+  css <- glue_css(
+    font_info = font_info,
+    path = font_dir,
+    browser_support = browser_support
+  )
 
   if (!isTRUE(prefer_local_source)) {
     css <- remove_local_src(css)
