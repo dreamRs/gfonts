@@ -6,7 +6,9 @@ output: rmarkdown::html_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE
 )
 ```
 
@@ -30,7 +32,7 @@ tags$div(
   lapply(
     X = c("roboto", "open-sans", "lato", "montserrat",
           "alegreya", "nunito-sans", "baloo", "happy-monkey",
-          "henny-penny"),
+          "henny-penny", "poppins", "oswald"),
     FUN = function(x) {
       tags$div(
         class = paste0("example-", x),
@@ -152,7 +154,27 @@ tag_example("example-henny-penny")
 
 
 
+## Poppins {.example-poppins}
 
+```{r}
+use_pkg_gfont("poppins", selector = ".example-poppins")
+```
+
+```{r, echo=FALSE, results='asis'}
+tag_example("example-poppins")
+```
+
+
+
+## Oswald {.example-oswald}
+
+```{r}
+use_pkg_gfont("oswald", selector = ".example-oswald")
+```
+
+```{r, echo=FALSE, results='asis'}
+tag_example("example-oswald")
+```
 
 
 
