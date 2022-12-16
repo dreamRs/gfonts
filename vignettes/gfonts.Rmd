@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 library(gfonts)
 ```
 
-{gfonts} allow you to use a [Google font](https://fonts.google.com/) to use it offline in a Shiny application or a R Markdown document. You can download a font via [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) and generate appropriate CSS to use it.
+{gfonts} allow you to use a [Google font](https://fonts.google.com/) to use it offline in a Shiny application or a R Markdown document. You can download a font via [google-webfonts-helper](https://gwfh.mranftl.com) and generate appropriate CSS to use it.
 
 
 ## Setup a font to use in your project

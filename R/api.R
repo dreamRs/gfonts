@@ -1,7 +1,7 @@
 
 #' @importFrom crul HttpClient
 get_gf <- function(path, query = list(), ...) {
-  url <- getOption("gfonts.url", default = "https://google-webfonts-helper.herokuapp.com")
+  url <- getOption("gfonts.url", default = "https://gwfh.mranftl.com")
   cli <- crul::HttpClient$new(url, ...)
   res <- cli$get(path = path, query = query)
   res$raise_for_status()
@@ -11,7 +11,7 @@ get_gf <- function(path, query = list(), ...) {
 
 #' @importFrom crul HttpClient
 is_service_ok <- function() {
-  url <- getOption("gfonts.url", default = "https://google-webfonts-helper.herokuapp.com")
+  url <- getOption("gfonts.url", default = "https://gwfh.mranftl.com")
   res <- crul::HttpClient$new(url)$get()
   res$status_code < 300
 }

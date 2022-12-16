@@ -1,3 +1,8 @@
+# gfonts 0.1.4
+
+* Change URL for service: https://gwfh.mranftl.com
+
+
 # gfonts 0.1.3
 
 * Fixed failing test.

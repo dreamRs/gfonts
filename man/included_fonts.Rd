@@ -15,7 +15,7 @@ A data frame with 8 rows and 5 variables:
 }
 }
 \source{
-\url{https://google-webfonts-helper.herokuapp.com/fonts}
+\url{https://gwfh.mranftl.com}
 }
 \usage{
 included_fonts

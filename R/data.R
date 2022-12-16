@@ -10,5 +10,5 @@
 #'   \item{version}{Version number.}
 #'   \item{lastModified}{Last modified date.}
 #' }
-#' @source \url{https://google-webfonts-helper.herokuapp.com/fonts}
+#' @source \url{https://gwfh.mranftl.com}
 "included_fonts"
