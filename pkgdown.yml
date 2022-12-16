@@ -1,8 +1,11 @@
-pandoc: 2.7.3
-pkgdown: 1.6.1.9001
-pkgdown_sha: 900ef5471576f8f29508a7e7d94fae51390f2d96
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
 articles:
-  articles/included-fonts: included-fonts.html
+  included-fonts: included-fonts.html
   gfonts: gfonts.html
-last_built: 2021-06-08T11:45Z
+last_built: 2022-12-16T09:26Z
+urls:
+  reference: https://dreamrs.github.io/gfonts/reference
+  article: https://dreamrs.github.io/gfonts/articles
 
