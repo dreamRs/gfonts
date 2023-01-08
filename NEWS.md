@@ -1,4 +1,4 @@
-# gfonts 0.1.4
+# gfonts 0.2.0
 
 * Change URL for service: https://gwfh.mranftl.com
 

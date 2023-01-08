@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/gfonts)](https://CRAN.R-project.org/package=gfonts)
 [![Codecov test
-coverage](https://codecov.io/gh/dreamRs/gfonts/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamRs/gfonts?branch=master)
+coverage](https://codecov.io/gh/dreamRs/gfonts/branch/master/graph/badge.svg)](https://app.codecov.io/gh/dreamRs/gfonts?branch=master)
 [![R-CMD-check](https://github.com/dreamRs/gfonts/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dreamRs/gfonts/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 

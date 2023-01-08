@@ -1,16 +1,14 @@
 ## Test environments
 
-* local Windows 10 install, R 4.1.0
-* ubuntu 20.04, Windows 10, macOS (on GitHub Actions), R 4.1.1
+* local Ubuntu 22.04 install, R 4.2.2
+* ubuntu 22.04, Windows 10, macOS (on GitHub Actions), R 4.2.2
 * win-builder (devel and release)
-* win-builder (devel)
 
 ## R CMD check results
 
 0 errors | 0 warnings | 0 note
 
-* Fixed a failing test reported by BDR.
-* Removed a dependency and some new features.
+* Updated API URL.
 
 Thanks,
 Victor

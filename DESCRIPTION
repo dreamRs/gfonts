@@ -1,13 +1,13 @@
 Package: gfonts
 Title: Offline 'Google' Fonts for 'Markdown' and 'Shiny'
-Version: 0.1.3.9000
+Version: 0.2.0
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", role = "aut"),
   person("Mario", "Ranftl", role = c("ctb", "cph"), comment = "google-webfonts-helper"))
 Description: Download 'Google' fonts and generate 'CSS' to use in 'rmarkdown' documents and 
   'shiny' applications. Some popular fonts are included and ready to use.
-URL: https://dreamrs.github.io/gfonts, https://github.com/dreamRs/gfonts
+URL: https://dreamrs.github.io/gfonts/, https://github.com/dreamRs/gfonts
 BugReports: https://github.com/dreamRs/gfonts/issues
 License: GPL-3
 Encoding: UTF-8
