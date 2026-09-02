@@ -1,8 +1,8 @@
 
 #' @title Use Google fonts offline
 #'
-#' @description Download Google fonts and generate CSS to use in {rmarkdown} documents and
-#' {shiny} applications. Some popular fonts are included and ready to use.
+#' @description Download Google fonts and generate CSS to use in \{rmarkdown\} documents and
+#' \{shiny\} applications. Some popular fonts are included and ready to use.
 #'
 #' @section Download a font:
 #' Use \code{\link{setup_font}} to get a font inside your current project,

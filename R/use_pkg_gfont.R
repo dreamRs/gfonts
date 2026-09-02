@@ -1,5 +1,5 @@
 
-#' @title Use a Google Font included in {gfonts}
+#' @title Use a Google Font included in \{gfonts\}
 #'
 #' @description For convenience, some fonts are included in the package,
 #'  you can use them without having to download them, but only few variants are available.
