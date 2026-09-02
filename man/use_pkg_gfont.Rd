@@ -2,7 +2,7 @@
 % Please edit documentation in R/use_pkg_gfont.R
 \name{use_pkg_gfont}
 \alias{use_pkg_gfont}
-\title{Use a Google Font included in {gfonts}}
+\title{Use a Google Font included in \{gfonts\}}
 \usage{
 use_pkg_gfont(
   font = c("roboto", "open-sans", "lato", "montserrat", "alegreya", "nunito-sans",
