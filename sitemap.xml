@@ -1,57 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/404.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/articles/gfonts.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/articles/included-fonts.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/index.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/download_font.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/generate_css.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/get_all_fonts.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/get_font_info.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/gfonts.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/included_fonts.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/setup_font.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/tag_example.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/use_font.html</loc>
-  </url>
-  <url>
-    <loc>https://dreamrs.github.io/gfonts/reference/use_pkg_gfont.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://dreamrs.github.io/gfonts/404.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/articles/gfonts.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/articles/included-fonts.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/articles/index.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/authors.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/index.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/news/index.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/download_font.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/generate_css.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/get_all_fonts.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/get_font_info.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/gfonts.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/included_fonts.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/index.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/setup_font.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/tag_example.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/use_font.html</loc></url>
+<url><loc>https://dreamrs.github.io/gfonts/reference/use_pkg_gfont.html</loc></url>
 </urlset>
+
