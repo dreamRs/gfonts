@@ -18,6 +18,16 @@ import the font.
 Some fonts are included in this package and can be used directly with
 [`use_pkg_gfont`](https://dreamrs.github.io/gfonts/reference/use_pkg_gfont.md).
 
+## See also
+
+Useful links:
+
+- <https://dreamrs.github.io/gfonts/>
+
+- <https://github.com/dreamRs/gfonts>
+
+- Report bugs at <https://github.com/dreamRs/gfonts/issues>
+
 ## Author
 
 Victor Perrier (@dreamRs_fr)

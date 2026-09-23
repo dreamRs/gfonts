@@ -26,7 +26,7 @@ remotes::install_github("dreamRs/gfonts")
 
 ## Download a font to use it locally
 
-Get the ID of the desired font between **1474** available :
+Get the ID of the desired font between **1955** available :
 
 ``` r
 

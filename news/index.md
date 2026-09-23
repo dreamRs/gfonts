@@ -1,5 +1,9 @@
 # Changelog
 
+## gfonts 0.2.1
+
+- Fixed the NOTEs about lost braces in the Rd files.
+
 ## gfonts 0.2.0
 
 CRAN release: 2023-01-08

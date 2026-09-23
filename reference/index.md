@@ -10,7 +10,8 @@
   : Get infos about all fonts available
 - [`get_font_info()`](https://dreamrs.github.io/gfonts/reference/get_font_info.md)
   : Get detailed information about a font
-- [`gfonts`](https://dreamrs.github.io/gfonts/reference/gfonts.md) : Use
+- [`gfonts-package`](https://dreamrs.github.io/gfonts/reference/gfonts.md)
+  [`gfonts`](https://dreamrs.github.io/gfonts/reference/gfonts.md) : Use
   Google fonts offline
 - [`included_fonts`](https://dreamrs.github.io/gfonts/reference/included_fonts.md)
   : Detail about included fonts.

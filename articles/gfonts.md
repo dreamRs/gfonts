@@ -48,34 +48,34 @@ To know all fonts and their ids, you can use
 ``` r
 
 head(get_all_fonts())
-#>             id       family
-#> 1    open-sans    Open Sans
-#> 2       roboto       Roboto
-#> 3  google-sans  Google Sans
-#> 4        inter        Inter
-#> 5   montserrat   Montserrat
-#> 6 noto-sans-jp Noto Sans JP
+#>            id      family
+#> 1      roboto      Roboto
+#> 2   open-sans   Open Sans
+#> 3 google-sans Google Sans
+#> 4       inter       Inter
+#> 5  montserrat  Montserrat
+#> 6     poppins     Poppins
 #>                                                                                                                                          variants
-#> 1                                                 300, regular, 500, 600, 700, 800, 300italic, italic, 500italic, 600italic, 700italic, 800italic
-#> 2 100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic
+#> 1 100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic
+#> 2                                                 300, regular, 500, 600, 700, 800, 300italic, italic, 500italic, 600italic, 700italic, 800italic
 #> 3                                                                                 regular, 500, 600, 700, italic, 500italic, 600italic, 700italic
 #> 4 100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic
 #> 5 100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic
-#> 6                                                                                                 100, 200, 300, regular, 500, 600, 700, 800, 900
+#> 6 100, 100italic, 200, 200italic, 300, 300italic, regular, italic, 500, 500italic, 600, 600italic, 700, 700italic, 800, 800italic, 900, 900italic
 #>                                                                                                                                                                                                                                           subsets
-#> 1                                                                                                                                                   cyrillic, cyrillic-ext, greek, greek-ext, hebrew, latin, latin-ext, math, symbols, vietnamese
-#> 2                                                                                                                                                           cyrillic, cyrillic-ext, greek, greek-ext, latin, latin-ext, math, symbols, vietnamese
+#> 1                                                                                                                                                           cyrillic, cyrillic-ext, greek, greek-ext, latin, latin-ext, math, symbols, vietnamese
+#> 2                                                                                                                                                   cyrillic, cyrillic-ext, greek, greek-ext, hebrew, latin, latin-ext, math, symbols, vietnamese
 #> 3 armenian, bengali, canadian-aboriginal, cyrillic, cyrillic-ext, devanagari, ethiopic, georgian, greek, greek-ext, gujarati, gurmukhi, hebrew, khmer, lao, latin, latin-ext, malayalam, oriya, sinhala, symbols, tamil, telugu, thai, vietnamese
 #> 4                                                                                                                                                                          cyrillic, cyrillic-ext, greek, greek-ext, latin, latin-ext, vietnamese
 #> 5                                                                                                                                                                                            cyrillic, cyrillic-ext, latin, latin-ext, vietnamese
-#> 6                                                                                                                                                                                                cyrillic, japanese, latin, latin-ext, vietnamese
+#> 6                                                                                                                                                                                                                    devanagari, latin, latin-ext
 #>     category version lastModified popularity defSubset defVariant
-#> 1 sans-serif     v44   2025-09-16          1     latin    regular
-#> 2 sans-serif     v51   2026-02-19          2     latin    regular
+#> 1 sans-serif     v51   2026-02-19          1     latin    regular
+#> 2 sans-serif     v44   2025-09-16          2     latin    regular
 #> 3 sans-serif     v70   2026-07-23          3     latin    regular
 #> 4 sans-serif     v20   2025-09-10          4     latin    regular
 #> 5 sans-serif     v31   2025-09-05          5     latin    regular
-#> 6 sans-serif     v56   2026-01-07          6     latin    regular
+#> 6 sans-serif     v24   2025-09-16          6     latin    regular
 ```
 
 ## Use a font
