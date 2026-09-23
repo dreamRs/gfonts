@@ -15,8 +15,8 @@ coverage](https://codecov.io/gh/dreamRs/gfonts/graph/badge.svg)](https://app.cod
 > Download ‘Google’ fonts (via
 > [google-webfonts-helper](https://gwfh.mranftl.com)) and generate CSS
 > to use in [rmarkdown](https://rmarkdown.rstudio.com/) documents and
-> [shiny](https://shiny.rstudio.com/) applications. Some popular fonts
-> are included and ready to use.
+> [shiny](https://shiny.posit.co/) applications. Some popular fonts are
+> included and ready to use.
 
 ## Installation
 
