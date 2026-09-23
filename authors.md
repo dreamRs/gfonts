@@ -17,13 +17,13 @@ Source:
 [`DESCRIPTION`](https://github.com/dreamRs/gfonts/blob/master/DESCRIPTION)
 
 Perrier V, Meyer F (2026). *gfonts: Offline 'Google' Fonts for
-'Markdown' and 'Shiny'*. R package version 0.2.0,
+'Markdown' and 'Shiny'*. R package version 0.2.1,
 <https://dreamrs.github.io/gfonts/>.
 
     @Manual{,
       title = {gfonts: Offline 'Google' Fonts for 'Markdown' and 'Shiny'},
       author = {Victor Perrier and Fanny Meyer},
       year = {2026},
-      note = {R package version 0.2.0},
+      note = {R package version 0.2.1},
       url = {https://dreamrs.github.io/gfonts/},
     }
