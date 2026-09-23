@@ -14,7 +14,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/dreamRs/gfonts/blob/master/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/dreamRs/gfonts/blob/v0.2.1/DESCRIPTION)
 
 Perrier V, Meyer F (2026). *gfonts: Offline 'Google' Fonts for
 'Markdown' and 'Shiny'*. R package version 0.2.1,
