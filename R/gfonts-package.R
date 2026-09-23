@@ -15,6 +15,5 @@
 #'
 #'
 #' @name gfonts
-#' @docType package
 #' @author Victor Perrier (@@dreamRs_fr)
-NULL
+"_PACKAGE"

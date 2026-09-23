@@ -7,9 +7,9 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/gfonts)](https://CRAN.R-project.org/package=gfonts)
-[![Codecov test
-coverage](https://codecov.io/gh/dreamRs/gfonts/branch/master/graph/badge.svg)](https://app.codecov.io/gh/dreamRs/gfonts?branch=master)
 [![R-CMD-check](https://github.com/dreamRs/gfonts/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dreamRs/gfonts/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/dreamRs/gfonts/graph/badge.svg)](https://app.codecov.io/gh/dreamRs/gfonts)
 <!-- badges: end -->
 
 > Download ‘Google’ fonts (via
@@ -36,7 +36,7 @@ remotes::install_github("dreamRs/gfonts")
 
 ## Download a font to use it locally
 
-Get the ID of the desired font between **1474** available :
+Get the ID of the desired font between **1955** available :
 
 ``` r
 library(gfonts)

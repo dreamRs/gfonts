@@ -1,3 +1,8 @@
+# gfonts 0.2.1
+
+* Fixed the NOTEs about lost braces in the Rd files.
+
+
 # gfonts 0.2.0
 
 * Change URL for service: https://gwfh.mranftl.com

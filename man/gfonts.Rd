@@ -2,6 +2,7 @@
 % Please edit documentation in R/gfonts-package.R
 \docType{package}
 \name{gfonts}
+\alias{gfonts-package}
 \alias{gfonts}
 \title{Use Google fonts offline}
 \description{
@@ -20,6 +21,15 @@ Use \code{\link{setup_font}} to get a font inside your current project,
 Some fonts are included in this package and can be used directly with \code{\link{use_pkg_gfont}}.
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://dreamrs.github.io/gfonts/}
+  \item \url{https://github.com/dreamRs/gfonts}
+  \item Report bugs at \url{https://github.com/dreamRs/gfonts/issues}
+}
+
+}
 \author{
 Victor Perrier (@dreamRs_fr)
 }
